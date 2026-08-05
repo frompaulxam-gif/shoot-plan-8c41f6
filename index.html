@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merchants Yard · Shoot Plan · Rest of Season 2026</title>
+<!-- internal working document. reachable by link, not by search. -->
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<style>
+/* ============================================================
+   MERCHANTS YARD — SHOOT PLAN
+   A call sheet that plays.
+   Lit like the day it describes: bleached daylight above the
+   14:00 DOORS seam, ink black below it.
+   ============================================================ */
+
+:root{
+  --sun:    #dfddd4;   /* bleached concrete, sunlit paving */
+  --ink:    #12110e;   /* warm near-black, after dark */
+  --paper:  #f4f2ec;   /* type on ink */
+  --shade:  #6e6a5e;   /* secondary, works on both grounds */
+  --tape:   #d8802a;   /* gaffer-tape amber. functional markers only */
+  --alert:  #a8321e;   /* production hot. used twice */
+
+  /* Didot/Bodoni 72 ship with macOS and match the venue's high-contrast
+     wordmark. Georgia (not Times) is the floor so a Windows viewer still
+     gets a sturdy serif rather than something that looks unfinished. */
+  --display: "Didot","Bodoni 72","Playfair Display",Georgia,serif;
+  --mono: ui-monospace,"SF Mono",SFMono-Regular,Menlo,"Courier New",monospace;
+  --body: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Inter",Arial,sans-serif;
+
+  --gut: clamp(18px,4vw,56px);
+  --rule: 1px;
+}
+
+*,*::before,*::after{ box-sizing:border-box }
+html{ -webkit-text-size-adjust:100% }
+body{
+  margin:0;
+  background:var(--sun);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ---------- shared type roles ---------- */
+.u-mono{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.u-dim{ color:var(--shade) }
+
+h1,h2,h3{ margin:0; font-weight:400 }
+
+/* ---------- band system: the two grounds ---------- */
+.band{ padding:0 var(--gut) }
+.band--day{ background:var(--sun); color:var(--ink) }
+.band--night{ background:var(--ink); color:var(--paper) }
+.band--night .u-dim{ color:#8d887a }
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.bar{
+  position:sticky; top:0; z-index:60;
+  display:flex; align-items:center; gap:18px;
+  padding:0 var(--gut);
+  height:46px;
+  background:var(--ink);
+  color:var(--paper);
+  border-bottom:var(--rule) solid var(--ink);
+}
+.bar__mark{
+  font-family:var(--display);
+  font-size:15px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.bar__nav{
+  margin-left:auto;
+  display:flex; gap:2px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.bar__nav::-webkit-scrollbar{ display:none }
+.bar__nav a{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:#8d887a; text-decoration:none;
+  padding:5px 8px;
+  white-space:nowrap;
+  border:var(--rule) solid transparent;
+}
+.bar__nav a:hover,.bar__nav a:focus-visible{ color:var(--paper); border-color:#3a372f }
+.bar__nav b{ color:var(--tape); font-weight:500; margin-right:5px }
+
+/* ============================================================
+   HERO — the thesis, in daylight
+   ============================================================ */
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(200px,300px);
+  gap:clamp(24px,5vw,72px);
+  align-items:end;
+  padding:clamp(40px,7vw,88px) 0 clamp(32px,5vw,56px);
+}
+.hero__eyebrow{ margin-bottom:clamp(20px,4vw,34px) }
+.hero__count{
+  font-family:var(--display);
+  font-size:clamp(46px,11.5vw,140px);
+  line-height:.84;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+  margin:0;
+}
+.hero__count span{ display:block }
+.hero__count em{
+  font-style:normal;
+  color:var(--tape);
+}
+.hero__lede{
+  max-width:44ch;
+  margin:clamp(22px,3.5vw,34px) 0 0;
+  font-size:clamp(14px,1.35vw,16px);
+  line-height:1.62;
+}
+.hero__lede strong{ font-weight:600 }
+.hero__figure{ margin:0 }
+.hero__frame{
+  position:relative;
+  aspect-ratio:9/16;
+  background:#c9c6bc;
+  /* hard sun casts a hard shadow. no blur anywhere on this page. */
+  box-shadow:14px 14px 0 var(--ink);
+}
+.hero__frame video{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.82) contrast(1.04);
+}
+.hero__cap{ margin-top:20px; display:block }
+
+/* ============================================================
+   BLOCK SECTIONS
+   ============================================================ */
+/* section dividers: one quiet hairline language in both bands.
+   the boldness on this page is spent on the hard shadows and the seam. */
+.blk{ padding:clamp(34px,5vw,62px) 0; border-top:var(--rule) solid }
+.band--day .blk{ border-top-color:rgba(18,17,14,.26) }
+.band--night .blk{ border-top-color:#33302a }
+/* C sits directly under the amber seam and needs no second rule */
+.band--night .blk:first-of-type{ border-top:0 }
+
+.blk__head{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 20px;
+  margin-bottom:clamp(22px,3vw,32px);
+}
+.blk__id{
+  font-family:var(--mono);
+  font-size:11px; letter-spacing:.2em; font-weight:600;
+  padding:4px 9px;
+  background:var(--ink); color:var(--sun);
+  align-self:center;
+}
+.band--night .blk__id{ background:var(--paper); color:var(--ink) }
+.blk__name{
+  font-family:var(--display);
+  font-size:clamp(26px,4.4vw,52px);
+  line-height:1;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+}
+.blk__time{ margin-left:auto; align-self:center; white-space:nowrap }
+.blk__sun{
+  align-self:center;
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--tape);
+  border:var(--rule) solid var(--tape);
+  padding:3px 8px;
+}
+.blk__why{
+  max-width:76ch;
+  margin:-8px 0 clamp(26px,3.4vw,36px);
+  font-size:14.5px; line-height:1.62;
+}
+.blk__path{ display:block; margin-top:10px }
+
+/* ---------- reel grid ---------- */
+.reels{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(232px,1fr));
+  gap:clamp(16px,2.4vw,30px);
+  list-style:none; margin:0; padding:0;
+}
+.reel{ display:flex; flex-direction:column; min-width:0 }
+
+.reel__stage{
+  position:relative;
+  width:100%;
+  background:#c9c6bc;
+  border:0; padding:0; margin:0;
+  cursor:pointer;
+  display:block;
+  overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease;
+  box-shadow:8px 8px 0 rgba(18,17,14,.16);
+}
+.band--night .reel__stage{ background:#22201b; box-shadow:8px 8px 0 rgba(0,0,0,.5) }
+.reel__stage:hover{ transform:translate(-2px,-2px); box-shadow:12px 12px 0 rgba(18,17,14,.28) }
+.band--night .reel__stage:hover{ box-shadow:12px 12px 0 rgba(0,0,0,.62) }
+.reel__stage:focus-visible{ outline:2px solid var(--tape); outline-offset:3px }
+
+.reel__stage video{
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+.reel__ratio{ display:block; width:100% }
+
+/* play affordance */
+.reel__play{
+  position:absolute; inset:auto 0 0 0;
+  display:flex; align-items:center; gap:7px;
+  padding:9px 11px;
+  background:linear-gradient(to top,rgba(18,17,14,.86),rgba(18,17,14,0));
+  color:var(--paper);
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  transition:opacity .18s ease;
+  pointer-events:none;
+}
+.reel__play::before{
+  content:"";
+  width:0; height:0;
+  border-left:8px solid var(--paper);
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+}
+.reel.is-playing .reel__play{ opacity:0 }
+
+/* badges */
+.reel__badges{
+  position:absolute; top:0; right:0;
+  display:flex; flex-direction:column; align-items:flex-end; gap:3px;
+  padding:8px;
+  pointer-events:none;
+}
+.reel__badge{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+  background:rgba(18,17,14,.82); color:var(--paper);
+  padding:3px 6px;
+}
+.reel__badge--ratio{ background:var(--tape); color:var(--ink); font-weight:600 }
+
+/* sound toggle */
+.reel__sound{
+  position:absolute; top:8px; left:8px;
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+  background:rgba(18,17,14,.82); color:var(--paper);
+  border:var(--rule) solid rgba(244,242,236,.3);
+  padding:4px 7px;
+  cursor:pointer;
+  opacity:0; transition:opacity .18s ease;
+}
+.reel.is-playing .reel__sound{ opacity:1 }
+.reel__sound:focus-visible{ opacity:1; outline:2px solid var(--tape); outline-offset:2px }
+
+/* card text */
+.reel__meta{
+  display:flex; flex-wrap:wrap; gap:4px 10px;
+  margin:13px 0 7px;
+}
+.reel__what{
+  font-size:13.5px; line-height:1.52;
+  margin:0;
+}
+.reel__what b{ font-weight:600 }
+/* the reference is what they did. this is what we're doing.
+   kept visually distinct so nobody confuses a note for a decision. */
+.reel__ours{
+  border-left:2px solid var(--tape);
+  padding:2px 0 2px 11px;
+  margin:11px 0 0;
+  font-size:13.5px; line-height:1.52;
+}
+.reel__ours b{ font-weight:600 }
+.reel__ours span{
+  display:block;
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--tape);
+  margin-bottom:5px;
+}
+.reel__src{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  margin-top:8px;
+}
+.reel__src a{ color:inherit; text-decoration:none; border-bottom:var(--rule) solid currentColor }
+.reel__src a:hover{ color:var(--tape); border-color:var(--tape) }
+
+.reel--stills .reel__stage{ cursor:default; box-shadow:none; border:var(--rule) dashed var(--shade) }
+.reel--stills .reel__stage:hover{ transform:none; box-shadow:none }
+.reel__nofile{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  padding:20px; text-align:center;
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--shade);
+  line-height:1.7;
+}
+/* a playback failure sits over the poster, so it needs its own ground */
+.reel__failed{
+  background:rgba(18,17,14,.92);
+  color:var(--paper);
+  text-transform:none; letter-spacing:.04em;
+  font-size:11px; line-height:1.6;
+}
+
+/* frames pulled out of a montage, so the useful second is not
+   buried inside six seconds of something else */
+.frames{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
+  gap:8px;
+  list-style:none; margin:18px 0 0; padding:0;
+}
+.frames figure{ margin:0 }   /* UA default is 1em 40px and eats the track */
+.frames img{ width:100%; aspect-ratio:9/16; object-fit:cover; display:block }
+.frames figcaption{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.1em; text-transform:uppercase;
+  margin-top:6px; color:#8d887a; line-height:1.5;
+}
+.frames__lead{ margin:26px 0 0 }
+
+/* ============================================================
+   THE SEAM — 14:00 DOORS
+   the signature. daylight above, night below, and the
+   empty→full reel sits on the line because that is
+   literally what the format is.
+   ============================================================ */
+.seam{ position:relative }
+.seam__half{ padding:0 var(--gut) }
+.seam__half--day{ background:var(--sun); color:var(--ink); padding-top:clamp(34px,5vw,58px) }
+.seam__half--night{ background:var(--ink); color:var(--paper); padding-bottom:clamp(34px,5vw,58px) }
+.seam__half--night .u-dim{ color:#8d887a }
+
+.seam__rule{
+  display:flex; align-items:center; gap:14px;
+  padding:0 var(--gut);
+  height:40px;
+  background:var(--tape);
+  color:var(--ink);
+}
+.seam__rule span{
+  font-family:var(--mono);
+  font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  font-weight:600;
+}
+.seam__rule i{
+  flex:1; height:var(--rule);
+  background:var(--ink);
+  opacity:.45;
+  transform-origin:left;
+}
+
+.seam__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(180px,244px) minmax(0,1fr);
+  gap:clamp(18px,3vw,40px);
+  align-items:center;
+}
+.seam__col--l{ text-align:right }
+.seam__pass{
+  font-family:var(--display);
+  font-size:clamp(20px,3vw,34px);
+  line-height:1.05;
+  text-transform:uppercase;
+  margin:0 0 8px;
+}
+.seam__note{ font-size:13.5px; line-height:1.56; margin:0; max-width:36ch }
+.seam__col--l .seam__note{ margin-left:auto }
+
+/* three pairs. the index is the pairing key, so the numbers mirror
+   around the seam and line up one-to-one across it. */
+.pairs{ list-style:none; margin:16px 0 0; padding:0; display:grid; gap:12px; max-width:36ch }
+.seam__col--l .pairs{ margin-left:auto }
+.pair{ display:flex; gap:12px; align-items:baseline }
+.seam__col--l .pair{ flex-direction:row-reverse }
+.pair__n{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.1em; font-weight:600;
+  color:var(--tape);
+  flex:none; padding-top:2px;
+}
+.pair__s{ flex:1; font-size:13.5px; line-height:1.5 }
+.pair__s b{ font-weight:600 }
+.seam__mid{ grid-column:2 }
+
+/* the split card: its top half sits in daylight, bottom in night */
+.seam__card{ position:relative; z-index:2 }
+.seam__cardhead{ text-align:center; margin-bottom:12px }
+.seam__cardfoot{ text-align:center; margin-top:12px }
+
+/* ============================================================
+   RUN OF DAY
+   ============================================================ */
+.run{ list-style:none; margin:0; padding:0; border-top:var(--rule) solid #33302a }
+.run__row{
+  display:grid;
+  grid-template-columns:82px 34px minmax(0,1fr);
+  gap:16px;
+  padding:15px 0;
+  border-bottom:var(--rule) solid #33302a;
+  align-items:baseline;
+}
+.run__t{
+  font-family:var(--mono);
+  font-size:13px; letter-spacing:.06em;
+  font-weight:600;
+  color:var(--tape);
+}
+.run__b{
+  font-family:var(--mono);
+  font-size:11px; letter-spacing:.14em; font-weight:600;
+  color:var(--paper);
+}
+.run__d{ font-size:14px; line-height:1.55; min-width:0 }
+.run__d b{ font-weight:600 }
+.run__row--pin{ background:rgba(216,128,42,.09) }
+.run__row--pin .run__d b{ color:var(--tape) }
+
+/* ============================================================
+   TRADING DATES
+   ============================================================ */
+.dates{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(112px,1fr));
+  gap:8px;
+  list-style:none; margin:0; padding:0;
+}
+.date{
+  border:var(--rule) solid #33302a;
+  padding:11px 11px 13px;
+  min-height:104px;
+  display:flex; flex-direction:column;
+}
+.date__dow{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:#8d887a;
+}
+.date__n{
+  font-family:var(--display);
+  font-size:30px; line-height:1; margin:5px 0 0;
+}
+.date__tag{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.1em; text-transform:uppercase;
+  line-height:1.5;
+  margin-top:auto; padding-top:9px;
+}
+.date--shoot{ background:var(--tape); border-color:var(--tape); color:var(--ink) }
+.date--shoot .date__dow{ color:rgba(18,17,14,.7) }
+.date--shoot .date__tag{ font-weight:600 }
+.date--key{ border-color:var(--tape) }
+.date--key .date__tag{ color:var(--tape) }
+.date--ask{ border-style:dashed }
+.date--ask .date__tag{ color:#8d887a }
+
+/* ============================================================
+   FLAGS
+   ============================================================ */
+.flags{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+  gap:clamp(18px,3vw,34px);
+}
+.flag{ border-top:2px solid var(--alert); padding-top:16px }
+.flag__k{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--alert);
+  display:block; margin-bottom:9px;
+}
+.flag__h{
+  font-family:var(--display);
+  font-size:clamp(21px,2.6vw,30px);
+  line-height:1.06; text-transform:uppercase;
+  margin:0 0 11px;
+}
+.flag p{ font-size:14px; line-height:1.6; margin:0 0 11px }
+.flag p:last-child{ margin-bottom:0 }
+
+/* ============================================================
+   NOTES
+   ============================================================ */
+.notes{ list-style:none; margin:0; padding:0 }
+.notes li{
+  display:grid;
+  grid-template-columns:26px minmax(0,1fr);
+  gap:14px;
+  padding:13px 0;
+  border-bottom:var(--rule) solid #33302a;
+  font-size:14px; line-height:1.56;
+}
+.notes li::before{
+  content:counter(n,decimal-leading-zero);
+  counter-increment:n;
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.1em;
+  color:var(--tape);
+  padding-top:3px;
+}
+.notes{ counter-reset:n }
+.notes b{ font-weight:600 }
+
+/* ============================================================
+   SECTION HEADS (lower page)
+   ============================================================ */
+.sec{ padding:clamp(40px,6vw,80px) 0; border-top:var(--rule) solid #33302a }
+.sec__head{ margin-bottom:clamp(22px,3vw,34px) }
+.sec__h{
+  font-family:var(--display);
+  font-size:clamp(28px,5vw,58px);
+  line-height:.98; text-transform:uppercase; letter-spacing:-.01em;
+  margin:6px 0 0;
+}
+.sec__sub{ max-width:72ch; margin:14px 0 0; font-size:14.5px; line-height:1.6 }
+
+/* ============================================================
+   FOOT
+   ============================================================ */
+.foot{
+  padding:clamp(30px,4vw,50px) var(--gut) clamp(40px,5vw,64px);
+  background:var(--ink); color:#8d887a;
+  border-top:var(--rule) solid #33302a;
+  display:flex; flex-wrap:wrap; gap:12px 30px; align-items:baseline;
+}
+.foot__mark{
+  font-family:var(--display); font-size:14px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--paper);
+}
+
+/* ============================================================
+   PAGE LOAD — one orchestrated moment, nothing scattered
+   ============================================================ */
+@keyframes rise{ from{ opacity:0; transform:translateY(14px) } to{ opacity:1; transform:none } }
+@keyframes draw{ from{ transform:scaleX(0) } to{ transform:scaleX(1) } }
+
+.hero__eyebrow,.hero__count span,.hero__lede,.hero__figure{
+  animation:rise .62s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero__count span:nth-child(1){ animation-delay:.06s }
+.hero__count span:nth-child(2){ animation-delay:.13s }
+.hero__count span:nth-child(3){ animation-delay:.2s }
+.hero__lede{ animation-delay:.3s }
+.hero__figure{ animation-delay:.16s }
+
+.seam__rule i{ animation:draw .9s .1s cubic-bezier(.2,.7,.2,1) both }
+
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease }
+.reveal.is-in{ opacity:1; transform:none }
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation:none !important; transition:none !important }
+  .reveal{ opacity:1; transform:none }
+  .reel__stage:hover{ transform:none }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:860px){
+  .hero{ grid-template-columns:1fr; align-items:start }
+  .hero__figure{ max-width:236px }
+  .hero__frame{ box-shadow:10px 10px 0 var(--ink) }
+  .seam__grid{ grid-template-columns:1fr; gap:20px }
+  .seam__col--l{ text-align:left }
+  .seam__col--l .seam__note{ margin-left:0 }
+  .seam__col--l .pairs{ margin-left:0 }
+  .seam__col--l .pair{ flex-direction:row }
+  /* the spacer columns become empty rows once stacked */
+  .seam__col[aria-hidden="true"]{ display:none }
+  .seam__mid{ grid-column:1; max-width:236px }
+  .blk__time{ margin-left:0 }
+  .run__row{ grid-template-columns:70px 30px minmax(0,1fr); gap:11px }
+}
+@media (max-width:640px){
+  /* the third instruction wraps and crushes the fixed-height rule.
+     it is repeated in the run of day and in block D, so drop it here. */
+  .seam__rule{ height:auto; min-height:38px; padding:9px var(--gut) }
+  .seam__rule span:nth-of-type(3),
+  .seam__rule i:nth-of-type(2){ display:none }
+}
+@media (max-width:520px){
+  .reels{ grid-template-columns:1fr 1fr; gap:12px }
+  .reel__what{ font-size:12.5px }
+  .reel__meta{ margin:10px 0 5px }
+  .bar__mark{ font-size:12px }
+}
+
+/* ============================================================
+   PRINT — degrade to a usable paper call sheet
+   ============================================================ */
+@media print{
+  body{ background:#fff; color:#000; font-size:10pt }
+  .bar,.hero__figure,.reel__stage{ display:none }
+  .band--night,.seam__half--night,.foot{ background:#fff; color:#000 }
+  .band--night .u-dim,.foot{ color:#555 }
+  .seam__rule{ background:#fff; border-top:2px solid #000; border-bottom:2px solid #000 }
+  .blk,.sec{ break-inside:avoid }
+  .reels{ grid-template-columns:1fr 1fr }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════ TOP BAR ══════════════════════════ -->
+<header class="bar">
+  <span class="bar__mark">Merchants Yard</span>
+  <nav class="bar__nav" aria-label="Jump to a block">
+    <a href="#blk-a"><b>A</b>Sun drinks</a>
+    <a href="#blk-f"><b>F</b>Staff</a>
+    <a href="#blk-e"><b>E</b>Plates</a>
+    <a href="#seam"><b>B</b>Empty→full</a>
+    <a href="#blk-c"><b>C</b>Peak</a>
+    <a href="#blk-g"><b>G</b>People</a>
+    <a href="#blk-d"><b>D</b>Overhead</a>
+    <a href="#run">Run of day</a>
+    <a href="#dates">Dates</a>
+    <a href="#flags">Flags</a>
+  </nav>
+</header>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<div class="band band--day">
+  <section class="hero">
+    <div>
+      <p class="u-mono u-dim hero__eyebrow">Shoot plan · rest of season 2026 · built 4 Aug</p>
+      <h1 class="hero__count">
+        <span>19 reels.</span>
+        <span>14 formats.</span>
+        <span><em>One Saturday.</em></span>
+      </h1>
+      <p class="hero__lede">
+        Every reference below was downloaded and watched frame by frame, not read off the caption.
+        Three turned out to be the same trend twice over. Grouped by <strong>what the shot
+        physically needs</strong> rather than by theme, seventeen of the nineteen fit into a single
+        day, 11:00 to 23:00.
+      </p>
+      <p class="hero__lede">
+        Six of them need direct sun. It is 4 August and the season closes on 26 September.
+        <strong>That block cannot slip.</strong> The two long people pieces are the exception to the
+        one-day rule: they want a genuinely big night, so they go on 21 Aug or the bank holiday.
+      </p>
+    </div>
+    <figure class="hero__figure">
+      <div class="hero__frame">
+        <video src="assets/hero.mp4" poster="assets/hero-poster.jpg"
+               muted loop autoplay playsinline webkit-playsinline
+               preload="metadata" disablepictureinpicture
+               aria-label="Merchants Yard, DJ at the decks"></video>
+      </div>
+      <figcaption class="u-mono u-dim hero__cap">The yard, already on file</figcaption>
+    </figure>
+  </section>
+</div>
+
+<!-- ══════════════════════════ DAYLIGHT BLOCKS ══════════════════════════ -->
+<div class="band band--day">
+
+  <!-- ---------- A ---------- -->
+  <section class="blk" id="blk-a">
+    <div class="blk__head">
+      <span class="blk__id">A</span>
+      <h2 class="blk__name">Drinks in the sun</h2>
+      <span class="blk__sun">☀ Direct sun</span>
+      <span class="u-mono u-dim blk__time">11:00 → 13:00</span>
+    </div>
+    <p class="blk__why">
+      Six references, one table, one tripod that does not move. Four of them are appear-cuts or
+      screen gimmicks, and every one of those dies if the camera shifts between takes, so they all
+      belong in the same locked-off position. Shoot the clean beauty passes while the light is best,
+      then the gimmicks from the same marks.
+      <span class="u-mono u-dim blk__path">refs / A-drinks-in-the-sun /</span>
+    </p>
+
+    <ul class="reels">
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/A-drinks-in-the-sun/01-mango-frozen-cocktail-hard-sun_oasthouse.mp4"
+          aria-label="Play: frozen mango cocktails in hard sun, The Oast House">
+          <img class="reel__ratio" src="refs/posters/01-mango-frozen-cocktail-hard-sun_oasthouse.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">5.9s · 60fps</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Closest match to the yard</span></p>
+        <p class="reel__what"><b>No text at all.</b> POV seated at a branded barrel table, hands in shot, straw stir, clink, top-down on the logo. Hard midday sun, bunting, outdoor yard.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DblRg8Pt67P/">The Oast House MCR ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/A-drinks-in-the-sun/02-cocktail-hero-plus-yousaid-iheard-text_lawnclub.mp4"
+          aria-label="Play: cocktail hero with you said, I heard text, The Lawn Club">
+          <img class="reel__ratio" src="refs/posters/02-cocktail-hero-plus-yousaid-iheard-text_lawnclub.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">7.2s</span><span class="reel__badge reel__badge--ratio">720×1280</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Text overlay + location pin</span></p>
+        <p class="reel__what">“<b>You said:</b> Let’s get drinks after work.” then “<b>I heard:</b> Meet me at Lawn Club.” Cocktail hero, astroturf terrace with picnic benches, clink. Ends on a location-pin card.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DbX9z_MNgsp/">The Lawn Club MCR ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/A-drinks-in-the-sun/03-brightness-slider-reveal_eatandgo.mp4"
+          aria-label="Play: brightness slider reveal, Eat and Go Erbil">
+          <img class="reel__ratio" src="refs/posters/03-brightness-slider-reveal_eatandgo.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">11.1s · 60fps</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Needs two exposures</span></p>
+        <p class="reel__what">A real iOS control panel is composited over the frame. A hand <b>drags brightness up</b> and flips Do Not Disturb on. As it brightens, the food appears. Ends “Do Not Disturb… Just Eat.”</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DZ-e1fMMx2l/">Eat &amp; Go Erbil ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/A-drinks-in-the-sun/04-tap-phone-screen-drink-appears_waraahi.mp4"
+          aria-label="Play: tap phone screen and the drink appears, Waraahi">
+          <img class="reel__ratio" src="refs/posters/04-tap-phone-screen-drink-appears_waraahi.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">9.2s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Appear-cut · prop: 2nd phone</span></p>
+        <p class="reel__what">A phone lies flat on the table showing a photo of a drink. A finger taps the screen. <b>The real drink appears beside it</b> in a hard cut. Logo end card.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DbIg6W8ILz1/">Waraahi ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/A-drinks-in-the-sun/05-scroll-menu-dish-appears_myata.mp4"
+          aria-label="Play: turning menu pages and each dish appears, MYATA Platinum">
+          <img class="reel__ratio" src="refs/posters/05-scroll-menu-dish-appears_myata.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">5.3s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Appear-cut · prop: menu</span></p>
+        <p class="reel__what">A hand turns the pages of a physical menu. <b>Every page turn, a different drink or dish is already on the table.</b> Six items in five seconds, one locked-off camera.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/Dapp-HeAPrU/">MYATA Platinum Dubai ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/A-drinks-in-the-sun/06-wipe-the-lens-reveal_wingsmilkshake.mp4"
+          aria-label="Play: wipe the camera reveal, Wings and Milkshake">
+          <img class="reel__ratio" src="refs/posters/06-wipe-the-lens-reveal_wingsmilkshake.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">6.6s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Blur, flash, sharp</span></p>
+        <p class="reel__what">“wait.. let me wipe the camera.” Frame is blurred and green. Black flash. “ah, much better.” <b>Sharp macro food and a drink.</b> Same table both halves.</p>
+        <p class="reel__ours"><span>Our version</span><b>Someone wiping their glasses.</b> Open on their blurred point of view, they take the glasses off and clean them, and the frame snaps sharp onto the drink. The reveal is motivated by something happening in the world rather than a hand smearing the lens, so it does not read as a gimmick.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DaAOeoxzPrW/">Wings &amp; Milkshake ↗</a></p>
+      </li>
+
+      <li class="reel reel--stills reveal">
+        <div class="reel__stage">
+          <img class="reel__ratio" src="refs/posters/01-mango-frozen-cocktail-hard-sun_oasthouse.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover;visibility:hidden">
+          <span class="reel__nofile">Stills only<br>Instagram blocks<br>the image download</span>
+        </div>
+        <p class="u-mono u-dim reel__meta"><span>Grid carousel · 2 photos</span></p>
+        <p class="reel__what">“If you’re looking for us this summer, we’ll be wherever the Spritzes are.” <b>Still drink photography for the grid.</b> Shoot it in the same setup as the reels above, same light, same table.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/p/Da7y0nFDXlm/">The Oast House MCR ↗</a></p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ---------- F ---------- -->
+  <section class="blk" id="blk-f">
+    <div class="blk__head">
+      <span class="blk__id">F</span>
+      <h2 class="blk__name">Staff and bar</h2>
+      <span class="u-mono u-dim blk__time">13:00 → 13:40</span>
+    </div>
+    <p class="blk__why">
+      Needs staff time and the bar, not the sun and not the crowd, so it slots into the gap before
+      doors. One camera on sticks. Zero production value and it works.
+      <span class="u-mono u-dim blk__path">refs / F-staff-bar /</span>
+    </p>
+    <ul class="reels">
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/F-staff-bar/01-blind-pour-challenge_oasthouse.mp4"
+          aria-label="Play: blind pour challenge, The Oast House">
+          <img class="reel__ratio" src="refs/posters/01-blind-pour-challenge_oasthouse.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">47.1s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Longest ref on the list</span></p>
+        <p class="reel__what"><b>“Blind Pour Challenge”</b> in big text. Staff blindfolded with a bar towel or a bucket hat pour three shots to the same level. Four or five of them, several attempts, “(attempt 2)” captioned when someone fails. <b>Shoot the reactions, not just the pour.</b></p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DbeBYR8RS2M/">The Oast House MCR ↗</a></p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ---------- E ---------- -->
+  <section class="blk" id="blk-e">
+    <div class="blk__head">
+      <span class="blk__id">E</span>
+      <h2 class="blk__name">Plate bank &amp; AI</h2>
+      <span class="u-mono u-dim blk__time">13:40 → 13:55</span>
+    </div>
+    <p class="blk__why">
+      Fifteen minutes of shooting, all the work at the desk. Locked-off empty wides of the entrance,
+      bar, screen, stage, full yard and the corner seating, fifteen seconds each, no people and no
+      camera movement. <b>This is the highest-value quarter hour of the day:</b> it funds every AI
+      post for the rest of the season without another shoot. Ask the venue for the real CCTV angle
+      while you are at it.
+      <span class="u-mono u-dim blk__path">refs / E-ai-cctv /</span>
+    </p>
+    <ul class="reels">
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/E-ai-cctv/01-fake-cctv-ai-big-cat-save-the-date_alcove.mp4"
+          aria-label="Play: fake CCTV with an AI big cat, Alcove">
+          <img class="reel__ratio" src="refs/posters/01-fake-cctv-ai-big-cat-save-the-date_alcove.jpg" alt="" style="aspect-ratio:4/3;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">11.0s</span><span class="reel__badge reel__badge--ratio">1440×1080</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Landscape, not vertical</span></p>
+        <p class="reel__what">A static plate of the front door with an <b>“ALCOVE Front Door Cam”</b> burn-in and a timestamp. An AI big cat walks across the paving and off. Cut to black: <b>“08 AUG / SAVE THE DATE.”</b> Caption: “Checked the cameras last night and a lil bit stunned… Full info Thurs.”</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DbWJnAANj15/">ALCOVE ↗</a></p>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<!-- ══════════════════════════ THE SEAM ══════════════════════════ -->
+<section class="seam" id="seam">
+  <div class="seam__half seam__half--day">
+    <div class="seam__grid">
+      <div class="seam__col seam__col--l">
+        <span class="u-mono u-dim">13:55 · before doors</span>
+        <p class="seam__pass">Empty pass</p>
+        <p class="seam__note">Three setups, taped at load-in. Same lens, same height, same exposure on both passes.</p>
+        <ol class="pairs">
+          <li class="pair"><span class="pair__n">01</span><span class="pair__s"><b>Overhead wide.</b> The whole yard from height, nobody in it.</span></li>
+          <li class="pair"><span class="pair__n">02</span><span class="pair__s"><b>The bar.</b> Clean, set, nobody being served.</span></li>
+          <li class="pair"><span class="pair__n">03</span><span class="pair__s"><b>The bench tables.</b> Empty and laid out.</span></li>
+        </ol>
+      </div>
+      <div class="seam__mid seam__card">
+        <p class="u-mono u-dim seam__cardhead"><span class="blk__id">B</span> &nbsp;Empty to full · three pairs</p>
+        <button class="reel__stage" type="button"
+          data-src="refs/B-empty-to-full/01-empty-then-full-same-frames_batch52.mp4"
+          aria-label="Play: empty then full, same frames, Batch Fifty Two">
+          <img class="reel__ratio" src="refs/posters/01-empty-then-full-same-frames_batch52.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">7.8s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+      </div>
+      <div class="seam__col seam__col--r" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="seam__rule">
+    <span>14:00</span><i></i><span>Doors</span><i></i><span>Mount the overhead rig</span>
+  </div>
+
+  <div class="seam__half seam__half--night">
+    <div class="seam__grid">
+      <div class="seam__col seam__col--l" aria-hidden="true"></div>
+      <div class="seam__mid">
+        <p class="u-mono u-dim seam__cardfoot">
+          Batch Fifty Two · 7.8s ·
+          <a href="https://www.instagram.com/reel/Da5lieLo_N5/" style="color:inherit">view ↗</a>
+        </p>
+      </div>
+      <div class="seam__col seam__col--r">
+        <span class="u-mono u-dim">21:00 → 23:00 · at peak</span>
+        <p class="seam__pass">Full pass</p>
+        <p class="seam__note">Back on the same three marks. The whole effect dies if the tripod moved, so tape the legs and photograph the tape.</p>
+        <ol class="pairs">
+          <li class="pair"><span class="pair__n">01</span><span class="pair__s"><b>Same overhead wide,</b> yard full. Scout the height at load-in: upstairs window, balcony, or the top of a ladder.</span></li>
+          <li class="pair"><span class="pair__n">02</span><span class="pair__s"><b>Same bar,</b> three deep and working.</span></li>
+          <li class="pair"><span class="pair__n">03</span><span class="pair__s"><b>Same tables, people dancing.</b> This one is the exception: it needs real dancing, so it may land closer to 23:00 than 21:00. Shoot it last.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ AFTER DARK BLOCKS ══════════════════════════ -->
+<div class="band band--night">
+
+  <!-- ---------- C ---------- -->
+  <section class="blk" id="blk-c">
+    <div class="blk__head">
+      <span class="blk__id">C</span>
+      <h2 class="blk__name">The room at peak</h2>
+      <span class="u-mono u-dim blk__time">14:00 → 21:00</span>
+    </div>
+    <p class="blk__why">
+      All three of these are cut from the same three buckets, so <b>shoot in threes: one drink macro,
+      one room wide, one people moment.</b> Ten times through the night and you can build every
+      format here without shooting anything twice. The split screens deliver landscape and the
+      montage delivers vertical, so frame with headroom and crop both from one take. Cast the
+      after-work and 30 to 45 groups on purpose rather than defaulting to the youngest table.
+      <span class="u-mono u-dim blk__path">refs / C-room-at-peak /</span>
+    </p>
+    <ul class="reels">
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/C-room-at-peak/01-drink-vibes-food-label-cycle_sunkiss.mp4"
+          aria-label="Play: drink, vibes, food label cycle, Sunkiss Ubud">
+          <img class="reel__ratio" src="refs/posters/01-drink-vibes-food-label-cycle_sunkiss.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">8.0s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Three shots, cycled three times</span></p>
+        <p class="reel__what">Only three shots exist: cocktail on table, wide of the room looking out, plate set down. Cycled on the beat with a single word pinned to the right of frame that swaps with the shot: <b>Drink / Vibes / Food.</b></p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/Dacr_6RzHAn/">Sunkiss Ubud ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/C-room-at-peak/02-splitscreen-come-stay_pvtltd.mp4"
+          aria-label="Play: split screen why people come, why people stay, PVT LTD">
+          <img class="reel__ratio" src="refs/posters/02-splitscreen-come-stay_pvtltd.jpg" alt="" style="aspect-ratio:1348/1078;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">14.0s</span><span class="reel__badge reel__badge--ratio">1348×1078</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Landscape, not vertical</span></p>
+        <p class="reel__what">Vertical split screen. Left column <b>WHY PEOPLE COME</b> carries drink macro and pours. Right column <b>WHY PEOPLE STAY</b> carries the sax player, the bar team, the room, the crowd. Cuts land in pairs.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/Dbk8KOHBdm9/">PVT LTD ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/C-room-at-peak/03-splitscreen-come-stay_bennies.mp4"
+          aria-label="Play: split screen why people come, why people stay, Bennie's Cafe">
+          <img class="reel__ratio" src="refs/posters/03-splitscreen-come-stay_bennies.jpg" alt="" style="aspect-ratio:4/3;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">10.7s</span><span class="reel__badge reel__badge--ratio">1080×810</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Same format again</span></p>
+        <p class="reel__what">The identical split screen from a different venue. Left is food and latte art, right is staff faces and customers laughing. <b>Two of your fourteen links are this one trend,</b> which confirms it works but means you are building one format, not two.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DbC5H9WAWgB/">Bennie’s Cafe ↗</a></p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ---------- G ---------- -->
+  <section class="blk" id="blk-g">
+    <div class="blk__head">
+      <span class="blk__id">G</span>
+      <h2 class="blk__name">People</h2>
+      <span class="u-mono u-dim blk__time">17:00 → close</span>
+    </div>
+    <p class="blk__why">
+      Block C gets you the room. This gets you the humans in it, and they are not the same job.
+      C can be composed, on sticks, shot from the edge. <b>G has to be at face level, handheld, and
+      inside the group</b> — close enough that people are reacting to each other rather than to you.
+      It also carries an obligation C does not: faces in close-up need actual permission, and the
+      one-person piece needs a proper yes from whoever is in it.
+      <span class="u-mono u-dim blk__path">refs / G-people /</span>
+    </p>
+    <p class="blk__why">
+      <b>The two long ones are the same footage doing two different jobs.</b> One invites people to
+      the next event, one carries a survey request. Neither was shot for its post. That is the same
+      argument as the plate bank: <b>one good night of faces funds months of posts</b> that would
+      otherwise each need their own shoot. Shoot the bank on the big Saturday, and if the crowd is
+      thin, top it up on an event night — 21 Aug or the bank holiday weekend.
+    </p>
+
+    <ul class="reels">
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/G-people/01-one-person-one-drink_stack.mp4"
+          aria-label="Play: one person, one drink, St James STACK">
+          <img class="reel__ratio" src="refs/posters/01-one-person-one-drink_stack.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">5.7s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>One person · one drink</span></p>
+        <p class="reel__what">A member of staff carries a tray of two beach-ball cocktails across the yard, laughing, then hands one over. Text is a relatable “the type of drink I order when…” joke, <b>and it carries a real offer</b> (2-4-1, 5pm to 7pm). Personality first, promotion smuggled in behind it.</p>
+        <p class="reel__ours"><span>Our version</span><b>Early doors, the after-work crowd.</b> Same format but shot 17:00 to 19:00 with the corporate lot, not the youngest table. This is where the 30 to 45 casting note stops being a note and becomes an actual shot.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DblQuIQMK8y/">St. James’ STACK ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/G-people/02-inside-the-crowd_stack.mp4"
+          aria-label="Play: inside the crowd, St James STACK">
+          <img class="reel__ratio" src="refs/posters/02-inside-the-crowd_stack.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">6.6s</span><span class="reel__badge reel__badge--ratio">720×1280</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Handheld, in the scrum</span></p>
+        <p class="reel__what">Football shirts, arms up, grown men hanging off each other. <b>Shot from inside the crowd, not from the edge of it</b> — shaky, unpolished, and that is exactly why it works. Text ties it to an occasion: “It’s payday weekend, bank hol &amp; you’re in STACK.”</p>
+        <p class="reel__ours"><span>Our version</span>Needs a real trigger to react to. <b>A goal on the big screen, a drop, or a chorus.</b> Get in position before the moment, not after it.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DWtsmwXMHHG/">St. James’ STACK ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/G-people/03-night-recap-that-invites_stack.mp4"
+          aria-label="Play: night recap that invites, St James STACK">
+          <img class="reel__ratio" src="refs/posters/03-night-recap-that-invites_stack.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">56.4s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>Long form · recap as invite</span></p>
+        <p class="reel__what">Nearly a minute of one big night: DJ, packed floor, disco balls, dancing on the benches, a singer working the mic, tables of people laughing. One line pinned throughout — <b>“you’re invited btw”</b> — which turns a recap of last week into an advert for this week.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DbpqLViICM9/">St. James’ STACK ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/G-people/04-people-bank-carries-a-message_stack.mp4"
+          aria-label="Play: people footage carrying a message, St James STACK">
+          <img class="reel__ratio" src="refs/posters/04-people-bank-carries-a-message_stack.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">50.6s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>The bank, spent</span></p>
+        <p class="reel__what">Fifty seconds of crowd, faces, couples, a live band and someone’s dog — carrying a pinned CTA: <b>“Have a say in your STACK experience. Take our survey now.”</b> Nothing here was shot for this post. It is the same bank as the reel beside it, spent on a job that would otherwise be a boring graphic.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DbGPbaoImDY/">St. James’ STACK ↗</a></p>
+      </li>
+
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/G-people/05-grab-bag-vibe-montage_loco.mp4"
+          aria-label="Play: grab bag vibe montage, Loco Taqueria">
+          <img class="reel__ratio" src="refs/posters/05-grab-bag-vibe-montage_loco.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">6.4s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>32 cuts in 6 seconds</span></p>
+        <p class="reel__what">A grab-bag with <b>one caption pinned over the whole thing</b>: “just a big fan of whatever vibe this is.” Food, a bartender mid-shake, the exterior, the crowd, a couple of daft street signs. No shot is precious and none lasts longer than a fifth of a second, so the edit does the work, not the footage.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DZaxAlwhe6-/">Loco Taqueria ↗</a></p>
+      </li>
+    </ul>
+
+    <p class="blk__why frames__lead">
+      Because that last one is a montage, here are <b>the person moments pulled out of it</b>. Five
+      looks, each about a fifth of a second on screen. This is the shot list for the block: not
+      “film the crowd”, but these specific five things.
+    </p>
+    <ul class="frames">
+      <li><figure><img src="refs/G-people/person-frames/01-bartender-smiling-behind-bar.jpg" alt="Bartender smiling while shaking a cocktail, sport on the screens behind"><figcaption>Staff mid-task, looking up</figcaption></figure></li>
+      <li><figure><img src="refs/G-people/person-frames/02-two-people-flashlit-night.jpg" alt="A woman being photographed at night under a video light, friends watching"><figcaption>Someone getting their photo taken</figcaption></figure></li>
+      <li><figure><img src="refs/G-people/person-frames/03-booth-under-neon.jpg" alt="A group standing and talking under a neon sign"><figcaption>A group under the signage</figcaption></figure></li>
+      <li><figure><img src="refs/G-people/person-frames/04-people-sat-at-the-bar.jpg" alt="Backs and faces of a crowd waiting at the bar"><figcaption>Backs of a queue at the bar</figcaption></figure></li>
+      <li><figure><img src="refs/G-people/person-frames/05-stringlit-patio-tables.jpg" alt="Wide of a string-lit covered terrace full of people at tables"><figcaption>Wide, full, string lights on</figcaption></figure></li>
+    </ul>
+  </section>
+
+  <!-- ---------- D ---------- -->
+  <section class="blk" id="blk-d">
+    <div class="blk__head">
+      <span class="blk__id">D</span>
+      <h2 class="blk__name">Entrance overhead</h2>
+      <span class="u-mono u-dim blk__time">14:00 → close, unattended</span>
+    </div>
+    <p class="blk__why">
+      This is a rig, not a shot. Clamp it above the door, start it rolling at opening, come back at
+      the end of the night. It runs while you shoot block C, and one night of arrivals gives you a
+      library of faces for every future edit. Needs the venue’s permission for the mount and a
+      filming notice at the door, sorted before the day rather than on it.
+      <span class="u-mono u-dim blk__path">refs / D-entrance-overhead /</span>
+    </p>
+    <ul class="reels">
+      <li class="reel reveal">
+        <button class="reel__stage" type="button"
+          data-src="refs/D-entrance-overhead/01-overhead-doormat-wave_unionchurch.mp4"
+          aria-label="Play: overhead doormat wave, Union Church">
+          <img class="reel__ratio" src="refs/posters/01-overhead-doormat-wave_unionchurch.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="reel__badges"><span class="reel__badge">19.3s</span><span class="reel__badge reel__badge--ratio">1080×1920</span></span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="u-mono u-dim reel__meta"><span>One mount · twelve groups</span></p>
+        <p class="reel__what">A camera is mounted <b>directly above the entrance mat pointing straight down.</b> Everyone who walks in looks up and waves, poses, holds up a sign. Twelve groups in nineteen seconds. Text: “POV: YOU PULLED UP TO SUMMER AT UNION”. Ends on a designed poster card with day, times and address.</p>
+        <p class="u-mono u-dim reel__src"><a href="https://www.instagram.com/reel/DZdNgvgpmoJ/">Union Church ↗</a></p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ---------- RUN OF DAY ---------- -->
+  <section class="sec" id="run">
+    <div class="sec__head">
+      <p class="u-mono u-dim">One Saturday · 12 of 14 formats · 10 to 12 posts</p>
+      <h2 class="sec__h">Run of day</h2>
+      <p class="sec__sub">
+        Read the “needs” column of the blocks above and the day builds itself. A, F and E all want an
+        empty venue and a static camera, so they go in the morning. C and D want the crowd, so they go
+        after doors. B brackets the whole thing.
+      </p>
+    </div>
+    <ol class="run">
+      <li class="run__row"><span class="run__t">10:45</span><span class="run__b">—</span><span class="run__d"><b>Load in.</b> Find where the sun actually lands at midday and pick the hero table. <b>Tape three tripod marks now</b> for the empty-to-full pairs: overhead yard wide, the bar, the bench tables. <b>Solve the overhead height while you are here</b> — upstairs window, balcony or ladder. Photograph each tape position and write down the focal length and exposure.</span></li>
+      <li class="run__row"><span class="run__t">11:00</span><span class="run__b">A</span><span class="run__d"><b>Clean drinks, best light.</b> 60fps. POV seated with hands in, straw stir, clink, condensation macro, top-down with the logo, wide of the table with the yard behind. Grid stills in the same setup.</span></li>
+      <li class="run__row run__row--pin"><span class="run__t">12:15</span><span class="run__b">A</span><span class="run__d"><b>Gimmicks. Camera does not move.</b> Empty table pass, then the same frame with the drink already there. Phone-tap. Menu page turns. Flat pass then bright pass for the brightness reel. The glasses wipe.</span></li>
+      <li class="run__row"><span class="run__t">13:00</span><span class="run__b">F</span><span class="run__d"><b>Staff challenges.</b> Blind Pour with four or five staff. Let them fail. Two or three extra challenge ideas while everyone is already there.</span></li>
+      <li class="run__row run__row--pin"><span class="run__t">13:40</span><span class="run__b">E</span><span class="run__d"><b>Plate bank.</b> Six locked-off empty wides, fifteen seconds each. Entrance from as high as you can get, bar, big screen, stage, full yard, corner seating. Ask for the real CCTV angle.</span></li>
+      <li class="run__row"><span class="run__t">13:55</span><span class="run__b">B</span><span class="run__d"><b>Three empty passes</b> on the taped marks: overhead yard, bar, bench tables.</span></li>
+      <li class="run__row run__row--pin"><span class="run__t">14:00</span><span class="run__b">D</span><span class="run__d"><b>Doors.</b> Mount the overhead rig above the entrance, start it rolling and leave it.</span></li>
+      <li class="run__row"><span class="run__t">14:00</span><span class="run__b">C</span><span class="run__d">First groups arriving, drinks going out, the yard filling.</span></li>
+      <li class="run__row"><span class="run__t">17:00</span><span class="run__b">C</span><span class="run__d"><b>Golden hour.</b> Best people footage of the day. Faces, laughing, groups mixing, low sun through glasses.</span></li>
+      <li class="run__row run__row--pin"><span class="run__t">17:00</span><span class="run__b">G</span><span class="run__d"><b>Early doors, one person one drink.</b> The after-work crowd, not the youngest table. Staff member carries the drink out, hands it over, says the line. This is the 30 to 45 casting note as an actual shot.</span></li>
+      <li class="run__row"><span class="run__t">19:00</span><span class="run__b">C</span><span class="run__d"><b>Peak.</b> DJ or live act, full yard, the screen, the bar working. Wide enough to crop landscape and vertical from one take.</span></li>
+      <li class="run__row run__row--pin"><span class="run__t">19:00</span><span class="run__b">G</span><span class="run__d"><b>Get inside the crowd.</b> Face level, handheld, in the group. Bank the five person looks: staff mid-task, someone being photographed, a group under the signage, backs of the bar queue, the full wide. <b>Be in position before the goal or the drop, not after it.</b></span></li>
+      <li class="run__row run__row--pin"><span class="run__t">21:00</span><span class="run__b">B</span><span class="run__d"><b>Three full passes</b> on the same marks: yard busy, bar three deep, tables dancing. <b>Shoot the dancing one last</b> — it needs real dancing, so it may not be there until closer to 23:00.</span></li>
+      <li class="run__row"><span class="run__t">23:00</span><span class="run__b">—</span><span class="run__d"><b>Wrap.</b> Pull the overhead rig. Offload cards before you leave the car. Note which formats you actually got.</span></li>
+    </ol>
+  </section>
+
+  <!-- ---------- DATES ---------- -->
+  <section class="sec" id="dates">
+    <div class="sec__head">
+      <p class="u-mono u-dim">Fri 5pm–midnight · Sat &amp; bank holidays 2pm–midnight</p>
+      <h2 class="sec__h">Trading dates left</h2>
+      <p class="sec__sub">
+        Every date the yard is open between now and the end of the season. September light is a coin
+        toss, so anything that needs sun has to happen in the eight August dates.
+      </p>
+    </div>
+    <ul class="dates">
+      <li class="date"><span class="date__dow">Fri</span><p class="date__n">7</p><span class="date__tag u-dim">August</span></li>
+      <li class="date date--shoot"><span class="date__dow">Sat</span><p class="date__n">8</p><span class="date__tag">Shoot day<br>11:00 → 23:00</span></li>
+      <li class="date"><span class="date__dow">Fri</span><p class="date__n">14</p><span class="date__tag u-dim">—</span></li>
+      <li class="date"><span class="date__dow">Sat</span><p class="date__n">15</p><span class="date__tag u-dim">Backup shoot day</span></li>
+      <li class="date date--ask"><span class="date__dow">Sun</span><p class="date__n">16</p><span class="date__tag">Community Shield<br>outside hours · ask</span></li>
+      <li class="date date--key"><span class="date__dow">Fri</span><p class="date__n">21</p><span class="date__tag">Premier League opens<br>inside Fri hours</span></li>
+      <li class="date date--key"><span class="date__dow">Sat</span><p class="date__n">22</p><span class="date__tag">First full PL Sat<br>3pm &amp; 5:30pm</span></li>
+      <li class="date"><span class="date__dow">Fri</span><p class="date__n">28</p><span class="date__tag u-dim">—</span></li>
+      <li class="date date--key"><span class="date__dow">Sat</span><p class="date__n">29</p><span class="date__tag">Bank holiday wknd</span></li>
+      <li class="date date--key"><span class="date__dow">Mon</span><p class="date__n">31</p><span class="date__tag">Bank holiday<br>2pm open</span></li>
+      <li class="date"><span class="date__dow">Fri</span><p class="date__n">4</p><span class="date__tag u-dim">September</span></li>
+      <li class="date"><span class="date__dow">Sat</span><p class="date__n">5</p><span class="date__tag u-dim">—</span></li>
+      <li class="date"><span class="date__dow">Fri</span><p class="date__n">11</p><span class="date__tag u-dim">—</span></li>
+      <li class="date"><span class="date__dow">Sat</span><p class="date__n">12</p><span class="date__tag u-dim">—</span></li>
+      <li class="date"><span class="date__dow">Fri</span><p class="date__n">18</p><span class="date__tag u-dim">—</span></li>
+      <li class="date"><span class="date__dow">Sat</span><p class="date__n">19</p><span class="date__tag u-dim">—</span></li>
+      <li class="date"><span class="date__dow">Fri</span><p class="date__n">25</p><span class="date__tag u-dim">—</span></li>
+      <li class="date date--key"><span class="date__dow">Sat</span><p class="date__n">26</p><span class="date__tag">Season closes<br>repost empty→full</span></li>
+    </ul>
+  </section>
+
+  <!-- ---------- FLAGS ---------- -->
+  <section class="sec" id="flags">
+    <div class="sec__head">
+      <p class="u-mono u-dim">Read before commissioning any of it</p>
+      <h2 class="sec__h">Two flags on the AI idea</h2>
+    </div>
+    <div class="flags">
+      <div class="flag">
+        <span class="flag__k">Flag 01 · rights</span>
+        <h3 class="flag__h">Nobody owns a leopard</h3>
+        <p>Spider-Man is a Marvel and Disney trademark. Michael Jackson’s likeness sits with his estate. Jude Bellingham is a living person with active commercial deals and image rights. In paid promotional content for a venue, that exposure lands on the client, and it is not a technicality.</p>
+        <p>The Alcove reel works precisely because a big cat belongs to no one. Keep the mechanic and swap the subject: a leopard, a gorilla, an escaped penguin, an astronaut, a knight in armour, a Yeti for the winter season. Same joke, no letter. If a celebrity angle is genuinely wanted, the safe route is a real lookalike or an obvious parody framing, agreed with the venue in writing first.</p>
+      </div>
+      <div class="flag">
+        <span class="flag__k">Flag 02 · realism</span>
+        <h3 class="flag__h">Hide it in found footage</h3>
+        <p>The Alcove reel is convincing because CCTV is low resolution, high angle, greyish and grainy. That framing hides every AI tell there is.</p>
+        <p>The same creature composited into a clean, sharp daylight hero shot will read plastic instantly and make the venue look cheap, which is the opposite of the brief. Keep all AI content inside found-footage framings: security cam, a phone held in a crowd, night, motion blur, someone’s story repost. Grade the AI element to match the plate, add matching grain, and check it at 100 percent before it goes out.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- NOTES ---------- -->
+  <section class="sec">
+    <div class="sec__head">
+      <p class="u-mono u-dim">The things that break the shot if you forget them</p>
+      <h2 class="sec__h">Kit &amp; post</h2>
+    </div>
+    <ul class="notes">
+      <li><b>Do not move the tripod during block A.</b> Every appear-cut in that block depends on it. Tape the legs, lock the head, note the focal length and exposure.</li>
+      <li>Shoot the sunlit block at <b>60fps</b> so slow motion stays an option. Both sun references on the list are 60fps sources.</li>
+      <li><b>Aspect ratios differ by format.</b> The two split screens and the CCTV reel are landscape. Everything else is vertical. Frame with headroom so one take crops to both.</li>
+      <li>The brightness reel needs <b>two exposures of the identical frame</b>, flat and bright. Shoot both back to back rather than trying to fix it in the grade.</li>
+      <li>Props to bring: a <b>second phone</b>, a <b>physical menu</b> and <b>a pair of glasses</b> plus someone willing to wear them. All three are in shot.</li>
+      <li>The empty-to-full reel is <b>three pairs, not one</b>, so it needs three sets of taped marks and the overhead position solved before doors. The dancing pair is the only shot on the day that cannot be rushed.</li>
+      <li>The overhead rig needs the venue’s permission for the mount and a <b>filming notice</b> at the door.</li>
+      <li>Block G is close-up faces, so a notice at the door is not enough on its own. <b>Get a proper yes from anyone who carries a shot</b>, especially the one-person piece, and be ready to drop a clip if someone changes their mind. Cheaper than an awkward DM later.</li>
+      <li>On-screen text does real work in six of the fourteen. Brew ffmpeg here has <b>no libass</b>, so burn text with the Pillow plus overlay pipeline in <span class="u-mono">~/Downloads/film_b_subtitled/tools/</span>.</li>
+      <li>The brief pushes 30 to 45 while the brand guidelines say 18 plus with broad appeal. <b>Resolve that in the casting, not the format.</b></li>
+    </ul>
+  </section>
+</div>
+
+<footer class="foot">
+  <span class="foot__mark">Merchants Yard</span>
+  <span class="u-mono">Shoot plan · rest of season 2026</span>
+  <span class="u-mono">Click any reel to play · click again to pause</span>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---- one reel plays at a time ------------------------------- */
+  var current = null;
+
+  /* a failure the viewer can read and report, instead of a dead poster */
+  function fail(stage, msg){
+    var card = stage.closest('.reel, .seam__card');
+    if(card) card.classList.remove('is-playing');
+    if(current === card) current = null;
+    if(stage.querySelector('.reel__failed')) return;
+    var w = document.createElement('span');
+    w.className = 'reel__nofile reel__failed';
+    w.textContent = msg;
+    stage.appendChild(w);
+  }
+
+  function stop(card){
+    if(!card) return;
+    var v = card.querySelector('video');
+    if(v){ v.pause(); }
+    card.classList.remove('is-playing');
+    if(current === card) current = null;
+  }
+
+  function start(stage){
+    var card = stage.closest('.reel, .seam__card');
+    if(!card) return;
+    var src = stage.getAttribute('data-src');
+    if(!src) return;
+
+    // already playing? toggle off.
+    var existing = stage.querySelector('video');
+    if(existing && !existing.paused){ stop(card); return; }
+
+    if(current && current !== card) stop(current);
+
+    if(!existing){
+      var img   = stage.querySelector('img');
+      var ratio = img ? getComputedStyle(img).aspectRatio : '9 / 16';
+
+      var v = document.createElement('video');
+      // iOS Safari: muted and playsinline must be set as ATTRIBUTES and
+      // must land BEFORE src, or the inline-autoplay policy refuses play()
+      // even though the element is muted. Order here is deliberate.
+      v.setAttribute('muted','');
+      v.muted = true;
+      v.setAttribute('playsinline','');
+      v.setAttribute('webkit-playsinline','');   // iOS < 10
+      v.playsInline = true;
+      v.setAttribute('loop','');
+      v.loop = true;
+      v.preload = 'auto';
+      v.src = src;
+      v.style.aspectRatio = ratio;
+      v.addEventListener('error', function(){
+        var c = v.error && v.error.code;
+        // code 4 covers both "browser can't decode it" and "file missing",
+        // so don't guess between them in the message.
+        fail(stage, c === 4
+          ? 'This one will not play here. Send Paul the reel name.'
+          : 'Could not load the video. Check your connection and try again.');
+      });
+      if(img) img.style.display = 'none';
+      stage.insertBefore(v, stage.firstChild);
+
+      // sound toggle, only once the video exists
+      var snd = document.createElement('button');
+      snd.type = 'button';
+      snd.className = 'reel__sound';
+      snd.textContent = 'Sound on';
+      snd.addEventListener('click', function(e){
+        e.stopPropagation();
+        v.muted = !v.muted;
+        snd.textContent = v.muted ? 'Sound on' : 'Sound off';
+      });
+      stage.appendChild(snd);
+      existing = v;
+    }
+
+    // optimistic so the card responds instantly, but self-correcting:
+    // if play() is refused, put the play button back rather than leaving
+    // a card with no affordance and no moving picture.
+    card.classList.add('is-playing');
+    current = card;
+    var p = existing.play();
+    if(p && p.catch) p.catch(function(err){
+      card.classList.remove('is-playing');
+      if(current === card) current = null;
+      if(err && err.name === 'NotAllowedError'){
+        fail(stage, 'Your browser blocked playback. Tap again.');
+      }
+    });
+  }
+
+  document.querySelectorAll('.reel__stage[data-src]').forEach(function(stage){
+    stage.addEventListener('click', function(){ start(stage); });
+  });
+
+  /* ---- scroll reveal ------------------------------------------ */
+  var items = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) ||
+     matchMedia('(prefers-reduced-motion: reduce)').matches){
+    items.forEach(function(el){ el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:0.08 });
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---- pause the hero when it scrolls away -------------------- */
+  var hero = document.querySelector('.hero__frame video');
+  if(hero && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(e){
+      e[0].isIntersecting ? hero.play().catch(function(){}) : hero.pause();
+    }, { threshold:0.15 }).observe(hero);
+  }
+})();
+</script>
+</body>
+</html>
