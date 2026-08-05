@@ -532,6 +532,48 @@ h1,h2,h3{ margin:0; font-weight:400 }
 .notes b{ font-weight:600 }
 
 /* ============================================================
+   ACCOUNTS TO FOLLOW
+   ============================================================ */
+.accts{ list-style:none; margin:0; padding:0; border-top:var(--rule) solid #33302a }
+.acct{
+  display:grid;
+  grid-template-columns:26px minmax(160px,220px) minmax(0,1fr);
+  gap:16px;
+  padding:15px 0;
+  border-bottom:var(--rule) solid #33302a;
+  align-items:baseline;
+}
+.acct__n{
+  font-family:var(--mono); font-size:10px; letter-spacing:.1em;
+  color:var(--tape); padding-top:3px;
+}
+.acct__h{ min-width:0 }
+.acct__h a{
+  font-family:var(--mono); font-size:12.5px; letter-spacing:.02em;
+  color:var(--paper); text-decoration:none;
+  border-bottom:var(--rule) solid #4a463d;
+  word-break:break-all;
+}
+.acct__h a:hover{ color:var(--tape); border-color:var(--tape) }
+.acct__place{ display:block; margin-top:4px }
+.acct__steal{ font-size:14px; line-height:1.55; min-width:0 }
+.acct__steal b{ font-weight:600 }
+
+.fixes{ display:grid; gap:12px; list-style:none; margin:22px 0 0; padding:0 }
+.fix{
+  border-left:2px solid var(--alert);
+  padding:2px 0 2px 12px;
+  font-size:13.5px; line-height:1.55;
+}
+.fix b{ font-weight:600 }
+.fix code{ font-family:var(--mono); font-size:12px; color:var(--tape) }
+
+@media (max-width:640px){
+  .acct{ grid-template-columns:22px minmax(0,1fr); gap:10px }
+  .acct__steal{ grid-column:2 }
+}
+
+/* ============================================================
    SECTION HEADS (lower page)
    ============================================================ */
 .sec{ padding:clamp(40px,6vw,80px) 0; border-top:var(--rule) solid #33302a }
@@ -646,6 +688,7 @@ h1,h2,h3{ margin:0; font-weight:400 }
     <a href="#run">Run of day</a>
     <a href="#dates">Dates</a>
     <a href="#flags">Flags</a>
+    <a href="#follow">Who to watch</a>
   </nav>
 </header>
 
@@ -1206,6 +1249,66 @@ h1,h2,h3{ margin:0; font-weight:400 }
       <li>On-screen text does real work in six of the fourteen. Brew ffmpeg here has <b>no libass</b>, so burn text with the Pillow plus overlay pipeline in <span class="u-mono">~/Downloads/film_b_subtitled/tools/</span>.</li>
       <li>The brief pushes 30 to 45 while the brand guidelines say 18 plus with broad appeal. <b>Resolve that in the casting, not the format.</b></li>
     </ul>
+  </section>
+
+  <!-- ---------- ACCOUNTS ---------- -->
+  <section class="sec" id="follow">
+    <div class="sec__head">
+      <p class="u-mono u-dim">Verified 5 Aug · full list in VENUES-TO-FOLLOW.md</p>
+      <h2 class="sec__h">Who to watch</h2>
+      <p class="sec__sub">
+        UK venues of the same type: yards, terraces, container parks and social spaces with sport
+        screens. Every handle resolves to a live profile whose page title matches the venue.
+        Follower counts are second-hand and should be treated as ballpark.
+      </p>
+    </div>
+
+    <ol class="accts">
+      <li class="acct"><span class="acct__n">01</span>
+        <span class="acct__h"><a href="https://www.instagram.com/digbethdiningclub/">@digbethdiningclub</a><span class="u-mono u-dim acct__place">Birmingham · ~109K</span></span>
+        <span class="acct__steal">Your closest analogue at scale, and in your region. <b>Steal the vendor-of-the-week format:</b> make the trader the character, not the venue. Endless content without needing a new event every week.</span></li>
+
+      <li class="acct"><span class="acct__n">02</span>
+        <span class="acct__h"><a href="https://www.instagram.com/stjamesstack/">@stjamesstack</a><span class="u-mono u-dim acct__place">Newcastle · matchday fan zone</span></span>
+        <span class="acct__steal">Four of your five people references came from here, and it is the closest venue on the list to Merchants Yard. <b>Steal the three-act fixture structure:</b> build-up as the crowd fills, reaction on the big screen, wind-down after.</span></li>
+
+      <li class="acct"><span class="acct__n">03</span>
+        <span class="acct__h"><a href="https://www.instagram.com/balticmarket/">@balticmarket</a><span class="u-mono u-dim acct__place">Liverpool · ~132K</span></span>
+        <span class="acct__steal">Biggest short-form library in the north for this venue type. <b>Steal the matchday cadence</b> and the way they cut food macro against wide crowd shots inside the same fifteen seconds.</span></li>
+
+      <li class="acct"><span class="acct__n">04</span>
+        <span class="acct__h"><a href="https://www.instagram.com/peddlermkt/">@peddlermkt</a><span class="u-mono u-dim acct__place">Sheffield · ~42K</span></span>
+        <span class="acct__steal">A monthly night market turned into a content engine. <b>Steal the countdown loop:</b> announce, line-up reveal, night-of, recap. Maps straight onto a weekly Friday and Saturday cycle.</span></li>
+
+      <li class="acct"><span class="acct__n">05</span>
+        <span class="acct__h"><a href="https://www.instagram.com/binksyard/">@binksyard</a><span class="u-mono u-dim acct__place">Nottingham · ~27K</span></span>
+        <span class="acct__steal">Nearest big-city peer at a scale you can actually resource against. <b>Steal the re-skin:</b> open-air cinema, themed nights, one space presented as several distinct events.</span></li>
+
+      <li class="acct"><span class="acct__n">06</span>
+        <span class="acct__h"><a href="https://www.instagram.com/templeof.fun/">@templeof.fun</a><span class="u-mono u-dim acct__place">Sheffield · ~62K</span></span>
+        <span class="acct__steal">Strongest visual identity here. <b>Steal the art-direction discipline:</b> a locked colour and lighting look, so a clip reads as theirs before the logo appears.</span></li>
+
+      <li class="acct"><span class="acct__n">07</span>
+        <span class="acct__h"><a href="https://www.instagram.com/boxparkcroydon/">@boxparkcroydon</a><span class="u-mono u-dim acct__place">London · fan park</span></span>
+        <span class="acct__steal">The reference for crowd energy. <b>Steal the reaction-cam framing:</b> point the camera at the crowd during a goal, not at the screen. Highest-shareability shot you have, and it costs nothing.</span></li>
+
+      <li class="acct"><span class="acct__n">08</span>
+        <span class="acct__h"><a href="https://www.instagram.com/tigeryardcardiff/">@tigeryardcardiff</a><span class="u-mono u-dim acct__place">Cardiff · ~30K</span></span>
+        <span class="acct__steal">Closest match to your actual problem: a yard that opens for summer. <b>Steal the season-opening hype run</b> and how they sell covered and heated space without killing the outdoor promise.</span></li>
+    </ol>
+
+    <p class="u-mono u-dim" style="margin:26px 0 0">Three handles worth correcting</p>
+    <ul class="fixes">
+      <li class="fix"><b>Lawn Club is <code>@lawnclubmcr</code>, not <code>@thelawnclub</code>.</b> Both accounts exist, but Instagram’s own metadata on the reel you sent says @lawnclubmcr posted it. That is the live one.</li>
+      <li class="fix"><b><code>@boxpark</code> is the Shoreditch site,</b> not a group account. The fan-park and crowd-reaction content everyone praises is Croydon and Wembley. Follow those two for sport nights.</li>
+      <li class="fix"><b>Freight Island is <code>@freightislandmcr</code>.</b> <code>@escapetofreightisland</code> returns a page with no profile on it.</li>
+    </ul>
+
+    <p class="sec__sub" style="margin-top:26px">
+      <b>No true local comparable exists in Leicester.</b> The outdoor scene here is conventional bar
+      terraces rather than yards or container parks, so Merchants Yard is effectively the only one of
+      its type in the city. That is a positioning line, not a gap in the research.
+    </p>
   </section>
 </div>
 
