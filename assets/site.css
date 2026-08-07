@@ -345,33 +345,34 @@ h1,h2,h3{ margin:0; font-weight:400 }
   border-bottom:var(--rule) solid #33302a;
   color:var(--tape);
 }
+/* the clips are the point of the page now, so they are sized to be
+   watched: one big tile on a phone, two on a tablet, four on a desktop */
 .clips{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(122px,1fr));
-  gap:10px;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:clamp(14px,1.8vw,24px);
   list-style:none; margin:0; padding:0;
 }
 .clip{ display:flex; flex-direction:column; min-width:0 }
-.clip__stage{ box-shadow:5px 5px 0 rgba(0,0,0,.45) }
-.clip__stage:hover{ box-shadow:8px 8px 0 rgba(0,0,0,.6) }
+.clip__stage{ box-shadow:8px 8px 0 rgba(0,0,0,.5) }
+.clip__stage:hover{ box-shadow:12px 12px 0 rgba(0,0,0,.65) }
 .clip__len{
   position:absolute; top:0; right:0;
   font-family:var(--mono);
-  font-size:9px; letter-spacing:.06em;
+  font-size:11px; letter-spacing:.06em;
   background:var(--tape); color:var(--ink);
   font-weight:600;
-  padding:3px 5px;
+  padding:5px 8px;
   pointer-events:none;
 }
 .clip.is-playing .clip__len{ opacity:0 }
 .clip__cap{
   font-family:var(--mono);
-  font-size:9px; letter-spacing:.08em; text-transform:uppercase;
-  color:#8d887a; line-height:1.5;
-  margin:7px 0 0;
+  font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  color:#a29c8e; line-height:1.5;
+  margin:11px 0 0;
 }
-.clip .reel__play{ padding:6px 7px; font-size:9px; gap:5px }
-.clip .reel__play::before{ border-left-width:6px; border-top-width:4px; border-bottom-width:4px }
+.clip__group{ font-size:12px }
 
 /* ============================================================
    THE SEAM — 14:00 DOORS
