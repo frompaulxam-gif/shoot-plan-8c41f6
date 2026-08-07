@@ -1,0 +1,696 @@
+/* ============================================================
+   MERCHANTS YARD — SHOOT PLAN
+   A call sheet that plays.
+   Lit like the day it describes: bleached daylight above the
+   14:00 DOORS seam, ink black below it.
+   ============================================================ */
+
+:root{
+  --sun:    #dfddd4;   /* bleached concrete, sunlit paving */
+  --ink:    #12110e;   /* warm near-black, after dark */
+  --paper:  #f4f2ec;   /* type on ink */
+  --shade:  #6e6a5e;   /* secondary, works on both grounds */
+  --tape:   #d8802a;   /* gaffer-tape amber. functional markers only */
+  --alert:  #a8321e;   /* production hot. used twice */
+
+  /* Didot/Bodoni 72 ship with macOS and match the venue's high-contrast
+     wordmark. Georgia (not Times) is the floor so a Windows viewer still
+     gets a sturdy serif rather than something that looks unfinished. */
+  --display: "Didot","Bodoni 72","Playfair Display",Georgia,serif;
+  --mono: ui-monospace,"SF Mono",SFMono-Regular,Menlo,"Courier New",monospace;
+  --body: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Inter",Arial,sans-serif;
+
+  --gut: clamp(18px,4vw,56px);
+  --rule: 1px;
+}
+
+*,*::before,*::after{ box-sizing:border-box }
+html{ -webkit-text-size-adjust:100% }
+body{
+  margin:0;
+  background:var(--sun);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ---------- shared type roles ---------- */
+.u-mono{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.u-dim{ color:var(--shade) }
+
+h1,h2,h3{ margin:0; font-weight:400 }
+
+/* ---------- band system: the two grounds ---------- */
+.band{ padding:0 var(--gut) }
+.band--day{ background:var(--sun); color:var(--ink) }
+.band--night{ background:var(--ink); color:var(--paper) }
+.band--night .u-dim{ color:#8d887a }
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.bar{
+  position:sticky; top:0; z-index:60;
+  display:flex; align-items:center; gap:18px;
+  padding:0 var(--gut);
+  height:46px;
+  background:var(--ink);
+  color:var(--paper);
+  border-bottom:var(--rule) solid var(--ink);
+}
+.bar__mark{
+  font-family:var(--display);
+  font-size:15px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.bar__nav{
+  margin-left:auto;
+  display:flex; gap:2px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.bar__nav::-webkit-scrollbar{ display:none }
+.bar__nav a{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:#8d887a; text-decoration:none;
+  padding:5px 8px;
+  white-space:nowrap;
+  border:var(--rule) solid transparent;
+}
+.bar__nav a:hover,.bar__nav a:focus-visible{ color:var(--paper); border-color:#3a372f }
+.bar__nav b{ color:var(--tape); font-weight:500; margin-right:5px }
+
+/* ============================================================
+   HERO — the thesis, in daylight
+   ============================================================ */
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(200px,300px);
+  gap:clamp(24px,5vw,72px);
+  align-items:end;
+  padding:clamp(40px,7vw,88px) 0 clamp(32px,5vw,56px);
+}
+.hero__eyebrow{ margin-bottom:clamp(20px,4vw,34px) }
+.hero__count{
+  font-family:var(--display);
+  font-size:clamp(46px,11.5vw,140px);
+  line-height:.84;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+  margin:0;
+}
+.hero__count span{ display:block }
+.hero__count em{
+  font-style:normal;
+  color:var(--tape);
+}
+.hero__lede{
+  max-width:44ch;
+  margin:clamp(22px,3.5vw,34px) 0 0;
+  font-size:clamp(14px,1.35vw,16px);
+  line-height:1.62;
+}
+.hero__lede strong{ font-weight:600 }
+.hero__figure{ margin:0 }
+.hero__frame{
+  position:relative;
+  aspect-ratio:9/16;
+  background:#c9c6bc;
+  /* hard sun casts a hard shadow. no blur anywhere on this page. */
+  box-shadow:14px 14px 0 var(--ink);
+}
+.hero__frame video{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.82) contrast(1.04);
+}
+.hero__cap{ margin-top:20px; display:block }
+
+/* ============================================================
+   BLOCK SECTIONS
+   ============================================================ */
+/* section dividers: one quiet hairline language in both bands.
+   the boldness on this page is spent on the hard shadows and the seam. */
+.blk{ padding:clamp(34px,5vw,62px) 0; border-top:var(--rule) solid }
+.band--day .blk{ border-top-color:rgba(18,17,14,.26) }
+.band--night .blk{ border-top-color:#33302a }
+/* C sits directly under the amber seam and needs no second rule */
+.band--night .blk:first-of-type{ border-top:0 }
+
+.blk__head{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 20px;
+  margin-bottom:clamp(22px,3vw,32px);
+}
+.blk__id{
+  font-family:var(--mono);
+  font-size:11px; letter-spacing:.2em; font-weight:600;
+  padding:4px 9px;
+  background:var(--ink); color:var(--sun);
+  align-self:center;
+}
+.band--night .blk__id{ background:var(--paper); color:var(--ink) }
+.blk__name{
+  font-family:var(--display);
+  font-size:clamp(26px,4.4vw,52px);
+  line-height:1;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+}
+.blk__time{ margin-left:auto; align-self:center; white-space:nowrap }
+.blk__sun{
+  align-self:center;
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--tape);
+  border:var(--rule) solid var(--tape);
+  padding:3px 8px;
+}
+.blk__why{
+  max-width:76ch;
+  margin:-8px 0 clamp(26px,3.4vw,36px);
+  font-size:14.5px; line-height:1.62;
+}
+.blk__path{ display:block; margin-top:10px }
+
+/* ---------- reel grid ---------- */
+.reels{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(232px,1fr));
+  gap:clamp(16px,2.4vw,30px);
+  list-style:none; margin:0; padding:0;
+}
+.reel{ display:flex; flex-direction:column; min-width:0 }
+
+.reel__stage{
+  position:relative;
+  width:100%;
+  background:#c9c6bc;
+  border:0; padding:0; margin:0;
+  cursor:pointer;
+  display:block;
+  overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease;
+  box-shadow:8px 8px 0 rgba(18,17,14,.16);
+}
+.band--night .reel__stage{ background:#22201b; box-shadow:8px 8px 0 rgba(0,0,0,.5) }
+.reel__stage:hover{ transform:translate(-2px,-2px); box-shadow:12px 12px 0 rgba(18,17,14,.28) }
+.band--night .reel__stage:hover{ box-shadow:12px 12px 0 rgba(0,0,0,.62) }
+.reel__stage:focus-visible{ outline:2px solid var(--tape); outline-offset:3px }
+
+.reel__stage video{
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+.reel__ratio{ display:block; width:100% }
+
+/* play affordance */
+.reel__play{
+  position:absolute; inset:auto 0 0 0;
+  display:flex; align-items:center; gap:7px;
+  padding:9px 11px;
+  background:linear-gradient(to top,rgba(18,17,14,.86),rgba(18,17,14,0));
+  color:var(--paper);
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  transition:opacity .18s ease;
+  pointer-events:none;
+}
+.reel__play::before{
+  content:"";
+  width:0; height:0;
+  border-left:8px solid var(--paper);
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+}
+.reel.is-playing .reel__play{ opacity:0 }
+
+/* badges */
+.reel__badges{
+  position:absolute; top:0; right:0;
+  display:flex; flex-direction:column; align-items:flex-end; gap:3px;
+  padding:8px;
+  pointer-events:none;
+}
+.reel__badge{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+  background:rgba(18,17,14,.82); color:var(--paper);
+  padding:3px 6px;
+}
+.reel__badge--ratio{ background:var(--tape); color:var(--ink); font-weight:600 }
+
+/* sound toggle */
+.reel__sound{
+  position:absolute; top:8px; left:8px;
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+  background:rgba(18,17,14,.82); color:var(--paper);
+  border:var(--rule) solid rgba(244,242,236,.3);
+  padding:4px 7px;
+  cursor:pointer;
+  opacity:0; transition:opacity .18s ease;
+}
+.reel.is-playing .reel__sound{ opacity:1 }
+.reel__sound:focus-visible{ opacity:1; outline:2px solid var(--tape); outline-offset:2px }
+
+/* card text */
+.reel__meta{
+  display:flex; flex-wrap:wrap; gap:4px 10px;
+  margin:13px 0 7px;
+}
+.reel__what{
+  font-size:13.5px; line-height:1.52;
+  margin:0;
+}
+.reel__what b{ font-weight:600 }
+/* the reference is what they did. this is what we're doing.
+   kept visually distinct so nobody confuses a note for a decision. */
+.reel__ours{
+  border-left:2px solid var(--tape);
+  padding:2px 0 2px 11px;
+  margin:11px 0 0;
+  font-size:13.5px; line-height:1.52;
+}
+.reel__ours b{ font-weight:600 }
+.reel__ours span{
+  display:block;
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--tape);
+  margin-bottom:5px;
+}
+.reel__src{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  margin-top:8px;
+}
+.reel__src a{ color:inherit; text-decoration:none; border-bottom:var(--rule) solid currentColor }
+.reel__src a:hover{ color:var(--tape); border-color:var(--tape) }
+
+.reel--stills .reel__stage{ cursor:default; box-shadow:none; border:var(--rule) dashed var(--shade) }
+.reel--stills .reel__stage:hover{ transform:none; box-shadow:none }
+.reel__nofile{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  padding:20px; text-align:center;
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--shade);
+  line-height:1.7;
+}
+/* a playback failure sits over the poster, so it needs its own ground */
+.reel__failed{
+  background:rgba(18,17,14,.92);
+  color:var(--paper);
+  text-transform:none; letter-spacing:.04em;
+  font-size:11px; line-height:1.6;
+}
+
+/* frames pulled out of a montage, so the useful second is not
+   buried inside six seconds of something else */
+.frames{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
+  gap:8px;
+  list-style:none; margin:18px 0 0; padding:0;
+}
+.frames figure{ margin:0 }   /* UA default is 1em 40px and eats the track */
+.frames img{ width:100%; aspect-ratio:9/16; object-fit:cover; display:block }
+.frames figcaption{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.1em; text-transform:uppercase;
+  margin-top:6px; color:#8d887a; line-height:1.5;
+}
+.frames__lead{ margin:26px 0 0 }
+
+/* the clip bank: one tile per detected shot */
+.clip__group{
+  margin:26px 0 12px;
+  padding-bottom:7px;
+  border-bottom:var(--rule) solid #33302a;
+  color:var(--tape);
+}
+.clips{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(122px,1fr));
+  gap:10px;
+  list-style:none; margin:0; padding:0;
+}
+.clip{ display:flex; flex-direction:column; min-width:0 }
+.clip__stage{ box-shadow:5px 5px 0 rgba(0,0,0,.45) }
+.clip__stage:hover{ box-shadow:8px 8px 0 rgba(0,0,0,.6) }
+.clip__len{
+  position:absolute; top:0; right:0;
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.06em;
+  background:var(--tape); color:var(--ink);
+  font-weight:600;
+  padding:3px 5px;
+  pointer-events:none;
+}
+.clip.is-playing .clip__len{ opacity:0 }
+.clip__cap{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.08em; text-transform:uppercase;
+  color:#8d887a; line-height:1.5;
+  margin:7px 0 0;
+}
+.clip .reel__play{ padding:6px 7px; font-size:9px; gap:5px }
+.clip .reel__play::before{ border-left-width:6px; border-top-width:4px; border-bottom-width:4px }
+
+/* ============================================================
+   THE SEAM — 14:00 DOORS
+   the signature. daylight above, night below, and the
+   empty→full reel sits on the line because that is
+   literally what the format is.
+   ============================================================ */
+.seam{ position:relative }
+.seam__half{ padding:0 var(--gut) }
+.seam__half--day{ background:var(--sun); color:var(--ink); padding-top:clamp(34px,5vw,58px) }
+.seam__half--night{ background:var(--ink); color:var(--paper); padding-bottom:clamp(34px,5vw,58px) }
+.seam__half--night .u-dim{ color:#8d887a }
+
+.seam__rule{
+  display:flex; align-items:center; gap:14px;
+  padding:0 var(--gut);
+  height:40px;
+  background:var(--tape);
+  color:var(--ink);
+}
+.seam__rule span{
+  font-family:var(--mono);
+  font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  font-weight:600;
+}
+.seam__rule i{
+  flex:1; height:var(--rule);
+  background:var(--ink);
+  opacity:.45;
+  transform-origin:left;
+}
+
+.seam__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(180px,244px) minmax(0,1fr);
+  gap:clamp(18px,3vw,40px);
+  align-items:center;
+}
+.seam__col--l{ text-align:right }
+.seam__pass{
+  font-family:var(--display);
+  font-size:clamp(20px,3vw,34px);
+  line-height:1.05;
+  text-transform:uppercase;
+  margin:0 0 8px;
+}
+.seam__note{ font-size:13.5px; line-height:1.56; margin:0; max-width:36ch }
+.seam__col--l .seam__note{ margin-left:auto }
+
+/* three pairs. the index is the pairing key, so the numbers mirror
+   around the seam and line up one-to-one across it. */
+.pairs{ list-style:none; margin:16px 0 0; padding:0; display:grid; gap:12px; max-width:36ch }
+.seam__col--l .pairs{ margin-left:auto }
+.pair{ display:flex; gap:12px; align-items:baseline }
+.seam__col--l .pair{ flex-direction:row-reverse }
+.pair__n{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.1em; font-weight:600;
+  color:var(--tape);
+  flex:none; padding-top:2px;
+}
+.pair__s{ flex:1; font-size:13.5px; line-height:1.5 }
+.pair__s b{ font-weight:600 }
+.seam__mid{ grid-column:2 }
+
+/* the split card: its top half sits in daylight, bottom in night */
+.seam__card{ position:relative; z-index:2 }
+.seam__cardhead{ text-align:center; margin-bottom:12px }
+.seam__cardfoot{ text-align:center; margin-top:12px }
+
+/* ============================================================
+   RUN OF DAY
+   ============================================================ */
+.run{ list-style:none; margin:0; padding:0; border-top:var(--rule) solid #33302a }
+.run__row{
+  display:grid;
+  grid-template-columns:82px 34px minmax(0,1fr);
+  gap:16px;
+  padding:15px 0;
+  border-bottom:var(--rule) solid #33302a;
+  align-items:baseline;
+}
+.run__t{
+  font-family:var(--mono);
+  font-size:13px; letter-spacing:.06em;
+  font-weight:600;
+  color:var(--tape);
+}
+.run__b{
+  font-family:var(--mono);
+  font-size:11px; letter-spacing:.14em; font-weight:600;
+  color:var(--paper);
+}
+.run__d{ font-size:14px; line-height:1.55; min-width:0 }
+.run__d b{ font-weight:600 }
+.run__row--pin{ background:rgba(216,128,42,.09) }
+.run__row--pin .run__d b{ color:var(--tape) }
+
+/* ============================================================
+   TRADING DATES
+   ============================================================ */
+.dates{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(112px,1fr));
+  gap:8px;
+  list-style:none; margin:0; padding:0;
+}
+.date{
+  border:var(--rule) solid #33302a;
+  padding:11px 11px 13px;
+  min-height:104px;
+  display:flex; flex-direction:column;
+}
+.date__dow{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  color:#8d887a;
+}
+.date__n{
+  font-family:var(--display);
+  font-size:30px; line-height:1; margin:5px 0 0;
+}
+.date__tag{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.1em; text-transform:uppercase;
+  line-height:1.5;
+  margin-top:auto; padding-top:9px;
+}
+.date--shoot{ background:var(--tape); border-color:var(--tape); color:var(--ink) }
+.date--shoot .date__dow{ color:rgba(18,17,14,.7) }
+.date--shoot .date__tag{ font-weight:600 }
+.date--key{ border-color:var(--tape) }
+.date--key .date__tag{ color:var(--tape) }
+.date--ask{ border-style:dashed }
+.date--ask .date__tag{ color:#8d887a }
+
+/* ============================================================
+   FLAGS
+   ============================================================ */
+.flags{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+  gap:clamp(18px,3vw,34px);
+}
+.flag{ border-top:2px solid var(--alert); padding-top:16px }
+.flag__k{
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--alert);
+  display:block; margin-bottom:9px;
+}
+.flag__h{
+  font-family:var(--display);
+  font-size:clamp(21px,2.6vw,30px);
+  line-height:1.06; text-transform:uppercase;
+  margin:0 0 11px;
+}
+.flag p{ font-size:14px; line-height:1.6; margin:0 0 11px }
+.flag p:last-child{ margin-bottom:0 }
+
+/* ============================================================
+   NOTES
+   ============================================================ */
+.notes{ list-style:none; margin:0; padding:0 }
+.notes li{
+  display:grid;
+  grid-template-columns:26px minmax(0,1fr);
+  gap:14px;
+  padding:13px 0;
+  border-bottom:var(--rule) solid #33302a;
+  font-size:14px; line-height:1.56;
+}
+.notes li::before{
+  content:counter(n,decimal-leading-zero);
+  counter-increment:n;
+  font-family:var(--mono);
+  font-size:10px; letter-spacing:.1em;
+  color:var(--tape);
+  padding-top:3px;
+}
+.notes{ counter-reset:n }
+.notes b{ font-weight:600 }
+
+/* ============================================================
+   ACCOUNTS TO FOLLOW
+   ============================================================ */
+.accts{ list-style:none; margin:0; padding:0; border-top:var(--rule) solid #33302a }
+.acct{
+  display:grid;
+  grid-template-columns:26px minmax(160px,220px) minmax(0,1fr);
+  gap:16px;
+  padding:15px 0;
+  border-bottom:var(--rule) solid #33302a;
+  align-items:baseline;
+}
+.acct__n{
+  font-family:var(--mono); font-size:10px; letter-spacing:.1em;
+  color:var(--tape); padding-top:3px;
+}
+.acct__h{ min-width:0 }
+.acct__h a{
+  font-family:var(--mono); font-size:12.5px; letter-spacing:.02em;
+  color:var(--paper); text-decoration:none;
+  border-bottom:var(--rule) solid #4a463d;
+  word-break:break-all;
+}
+.acct__h a:hover{ color:var(--tape); border-color:var(--tape) }
+.acct__place{ display:block; margin-top:4px }
+.acct__steal{ font-size:14px; line-height:1.55; min-width:0 }
+.acct__steal b{ font-weight:600 }
+
+.fixes{ display:grid; gap:12px; list-style:none; margin:22px 0 0; padding:0 }
+.fix{
+  border-left:2px solid var(--alert);
+  padding:2px 0 2px 12px;
+  font-size:13.5px; line-height:1.55;
+}
+.fix b{ font-weight:600 }
+.fix code{ font-family:var(--mono); font-size:12px; color:var(--tape) }
+
+@media (max-width:640px){
+  .acct{ grid-template-columns:22px minmax(0,1fr); gap:10px }
+  .acct__steal{ grid-column:2 }
+}
+
+/* ============================================================
+   SECTION HEADS (lower page)
+   ============================================================ */
+.sec{ padding:clamp(40px,6vw,80px) 0; border-top:var(--rule) solid #33302a }
+.sec__head{ margin-bottom:clamp(22px,3vw,34px) }
+.sec__h{
+  font-family:var(--display);
+  font-size:clamp(28px,5vw,58px);
+  line-height:.98; text-transform:uppercase; letter-spacing:-.01em;
+  margin:6px 0 0;
+}
+.sec__sub{ max-width:72ch; margin:14px 0 0; font-size:14.5px; line-height:1.6 }
+
+/* ============================================================
+   FOOT
+   ============================================================ */
+.foot{
+  padding:clamp(30px,4vw,50px) var(--gut) clamp(40px,5vw,64px);
+  background:var(--ink); color:#8d887a;
+  border-top:var(--rule) solid #33302a;
+  display:flex; flex-wrap:wrap; gap:12px 30px; align-items:baseline;
+}
+.foot__mark{
+  font-family:var(--display); font-size:14px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--paper);
+}
+
+/* ============================================================
+   PAGE LOAD — one orchestrated moment, nothing scattered
+   ============================================================ */
+@keyframes rise{ from{ opacity:0; transform:translateY(14px) } to{ opacity:1; transform:none } }
+@keyframes draw{ from{ transform:scaleX(0) } to{ transform:scaleX(1) } }
+
+.hero__eyebrow,.hero__count span,.hero__lede,.hero__figure{
+  animation:rise .62s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero__count span:nth-child(1){ animation-delay:.06s }
+.hero__count span:nth-child(2){ animation-delay:.13s }
+.hero__count span:nth-child(3){ animation-delay:.2s }
+.hero__lede{ animation-delay:.3s }
+.hero__figure{ animation-delay:.16s }
+
+.seam__rule i{ animation:draw .9s .1s cubic-bezier(.2,.7,.2,1) both }
+
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease }
+.reveal.is-in{ opacity:1; transform:none }
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation:none !important; transition:none !important }
+  .reveal{ opacity:1; transform:none }
+  .reel__stage:hover{ transform:none }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:860px){
+  .hero{ grid-template-columns:1fr; align-items:start }
+  .hero__figure{ max-width:236px }
+  .hero__frame{ box-shadow:10px 10px 0 var(--ink) }
+  .seam__grid{ grid-template-columns:1fr; gap:20px }
+  .seam__col--l{ text-align:left }
+  .seam__col--l .seam__note{ margin-left:0 }
+  .seam__col--l .pairs{ margin-left:0 }
+  .seam__col--l .pair{ flex-direction:row }
+  /* the spacer columns become empty rows once stacked */
+  .seam__col[aria-hidden="true"]{ display:none }
+  .seam__mid{ grid-column:1; max-width:236px }
+  .blk__time{ margin-left:0 }
+  .run__row{ grid-template-columns:70px 30px minmax(0,1fr); gap:11px }
+}
+@media (max-width:640px){
+  /* the third instruction wraps and crushes the fixed-height rule.
+     it is repeated in the run of day and in block D, so drop it here. */
+  .seam__rule{ height:auto; min-height:38px; padding:9px var(--gut) }
+  .seam__rule span:nth-of-type(3),
+  .seam__rule i:nth-of-type(2){ display:none }
+}
+@media (max-width:520px){
+  .reels{ grid-template-columns:1fr 1fr; gap:12px }
+  .reel__what{ font-size:12.5px }
+  .reel__meta{ margin:10px 0 5px }
+  .bar__mark{ font-size:12px }
+}
+
+/* ============================================================
+   PRINT — degrade to a usable paper call sheet
+   ============================================================ */
+@media print{
+  body{ background:#fff; color:#000; font-size:10pt }
+  .bar,.hero__figure,.reel__stage{ display:none }
+  .band--night,.seam__half--night,.foot{ background:#fff; color:#000 }
+  .band--night .u-dim,.foot{ color:#555 }
+  .seam__rule{ background:#fff; border-top:2px solid #000; border-bottom:2px solid #000 }
+  .blk,.sec{ break-inside:avoid }
+  .reels{ grid-template-columns:1fr 1fr }
+}
