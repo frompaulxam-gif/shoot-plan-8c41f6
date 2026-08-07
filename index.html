@@ -349,6 +349,41 @@ h1,h2,h3{ margin:0; font-weight:400 }
 }
 .frames__lead{ margin:26px 0 0 }
 
+/* the clip bank: one tile per detected shot */
+.clip__group{
+  margin:26px 0 12px;
+  padding-bottom:7px;
+  border-bottom:var(--rule) solid #33302a;
+  color:var(--tape);
+}
+.clips{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(122px,1fr));
+  gap:10px;
+  list-style:none; margin:0; padding:0;
+}
+.clip{ display:flex; flex-direction:column; min-width:0 }
+.clip__stage{ box-shadow:5px 5px 0 rgba(0,0,0,.45) }
+.clip__stage:hover{ box-shadow:8px 8px 0 rgba(0,0,0,.6) }
+.clip__len{
+  position:absolute; top:0; right:0;
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.06em;
+  background:var(--tape); color:var(--ink);
+  font-weight:600;
+  padding:3px 5px;
+  pointer-events:none;
+}
+.clip.is-playing .clip__len{ opacity:0 }
+.clip__cap{
+  font-family:var(--mono);
+  font-size:9px; letter-spacing:.08em; text-transform:uppercase;
+  color:#8d887a; line-height:1.5;
+  margin:7px 0 0;
+}
+.clip .reel__play{ padding:6px 7px; font-size:9px; gap:5px }
+.clip .reel__play::before{ border-left-width:6px; border-top-width:4px; border-bottom-width:4px }
+
 /* ============================================================
    THE SEAM — 14:00 DOORS
    the signature. daylight above, night below, and the
@@ -1116,6 +1151,355 @@ h1,h2,h3{ margin:0; font-weight:400 }
       <li><figure><img src="refs/G-people/person-frames/04-people-sat-at-the-bar.jpg" alt="Backs and faces of a crowd waiting at the bar"><figcaption>Backs of a queue at the bar</figcaption></figure></li>
       <li><figure><img src="refs/G-people/person-frames/05-stringlit-patio-tables.jpg" alt="Wide of a string-lit covered terrace full of people at tables"><figcaption>Wide, full, string lights on</figcaption></figure></li>
     </ul>
+    <p class="blk__why frames__lead">
+      <b>The recap, cut up shot by shot.</b> Scene detection found 29 shots across the 56
+      seconds and nearly all of them are people. Grouped by what the shot is doing, because
+      that is how you shoot it: the close human stuff first, the room last.
+      <span class="u-mono u-dim blk__path">refs / G-people / clips / stack-recap /</span>
+    </p>
+    <p class="u-mono clip__group">One person going for it <span class="u-dim">· 5 clips</span></p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/solo-03-older-woman-dancing-fists-up.mp4" aria-label="Play: older woman dancing fists up">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/solo-03-older-woman-dancing-fists-up.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.2s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">older woman dancing fists up</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/solo-11-older-man-dancing-arm-up.mp4" aria-label="Play: older man dancing arm up">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/solo-11-older-man-dancing-arm-up.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.2s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">older man dancing arm up</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/solo-18-older-woman-arms-wide-laughing.mp4" aria-label="Play: older woman arms wide laughing">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/solo-18-older-woman-arms-wide-laughing.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.5s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">older woman arms wide laughing</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/solo-19-blonde-floral-dress-dancing.mp4" aria-label="Play: blonde floral dress dancing">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/solo-19-blonde-floral-dress-dancing.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.4s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">blonde floral dress dancing</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/solo-22-bearded-man-hawaiian-arms-out.mp4" aria-label="Play: bearded man hawaiian arms out">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/solo-22-bearded-man-hawaiian-arms-out.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.8s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">bearded man hawaiian arms out</p>
+      </li>
+    </ul>
+    <p class="u-mono clip__group">Two of them together <span class="u-dim">· 5 clips</span></p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/pair-06-red-polo-dancing-with-her.mp4" aria-label="Play: red polo dancing with her">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/pair-06-red-polo-dancing-with-her.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.6s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">red polo dancing with her</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/pair-09-two-older-women-laughing-at-table.mp4" aria-label="Play: two older women laughing at table">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/pair-09-two-older-women-laughing-at-table.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">2.2s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">two older women laughing at table</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/pair-10-two-dancing-red-light-blur.mp4" aria-label="Play: two dancing red light blur">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/pair-10-two-dancing-red-light-blur.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">2.5s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">two dancing red light blur</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/pair-16-two-lads-on-mics-faces-close.mp4" aria-label="Play: two lads on mics faces close">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/pair-16-two-lads-on-mics-faces-close.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.7s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">two lads on mics faces close</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/pair-20-two-women-with-props.mp4" aria-label="Play: two women with props">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/pair-20-two-women-with-props.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">2.0s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">two women with props</p>
+      </li>
+    </ul>
+    <p class="u-mono clip__group">Groups at the benches <span class="u-dim">· 3 clips</span></p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/table-13-women-at-table-arms-up.mp4" aria-label="Play: women at table arms up">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/table-13-women-at-table-arms-up.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.7s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">women at table arms up</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/table-17-seated-tables-chatting.mp4" aria-label="Play: seated tables chatting">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/table-17-seated-tables-chatting.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.6s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">seated tables chatting</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/table-26-bench-table-group-man-standing.mp4" aria-label="Play: bench table group man standing">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/table-26-bench-table-group-man-standing.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.3s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">bench table group man standing</p>
+      </li>
+    </ul>
+    <p class="u-mono clip__group">Inside the crowd <span class="u-dim">· 6 clips</span></p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/crowd-04-in-the-crowd-singing-along.mp4" aria-label="Play: in the crowd singing along">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/crowd-04-in-the-crowd-singing-along.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.1s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">in the crowd singing along</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/crowd-08-arms-up-red-balloon.mp4" aria-label="Play: arms up red balloon">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/crowd-08-arms-up-red-balloon.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.9s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">arms up red balloon</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/crowd-14-from-stage-hands-up.mp4" aria-label="Play: from stage hands up">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/crowd-14-from-stage-hands-up.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.2s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">from stage hands up</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/crowd-21-group-from-behind-drinks.mp4" aria-label="Play: group from behind drinks">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/crowd-21-group-from-behind-drinks.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.8s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">group from behind drinks</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/crowd-23-arms-up-purple.mp4" aria-label="Play: arms up purple">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/crowd-23-arms-up-purple.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.7s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">arms up purple</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/crowd-25-group-batons-raised.mp4" aria-label="Play: group batons raised">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/crowd-25-group-batons-raised.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.6s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">group batons raised</p>
+      </li>
+    </ul>
+    <p class="u-mono clip__group">The act <span class="u-dim">· 1 clip</span></p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/stage-15-the-singer-on-the-mic.mp4" aria-label="Play: the singer on the mic">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/stage-15-the-singer-on-the-mic.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">2.0s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">the singer on the mic</p>
+      </li>
+    </ul>
+    <p class="u-mono clip__group">Small moments <span class="u-dim">· 2 clips</span></p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/detail-12-man-filming-on-his-phone.mp4" aria-label="Play: man filming on his phone">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/detail-12-man-filming-on-his-phone.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.1s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">man filming on his phone</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/detail-24-drinking-from-inflatable-baton.mp4" aria-label="Play: drinking from inflatable baton">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/detail-24-drinking-from-inflatable-baton.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.5s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">drinking from inflatable baton</p>
+      </li>
+    </ul>
+    <p class="u-mono clip__group">The room, full <span class="u-dim">· 7 clips</span></p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/wide-01-venue-wide-batons-stage.mp4" aria-label="Play: venue wide batons stage">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/wide-01-venue-wide-batons-stage.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.7s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">venue wide batons stage</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/wide-02-wide-purple-discoballs.mp4" aria-label="Play: wide purple discoballs">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/wide-02-wide-purple-discoballs.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">4.2s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">wide purple discoballs</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/wide-05-stage-wide-green-pink.mp4" aria-label="Play: stage wide green pink">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/wide-05-stage-wide-green-pink.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.2s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">stage wide green pink</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/wide-07-room-wide-tables-discoball.mp4" aria-label="Play: room wide tables discoball">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/wide-07-room-wide-tables-discoball.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">2.9s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">room wide tables discoball</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/wide-27-venue-wide-from-above.mp4" aria-label="Play: venue wide from above">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/wide-27-venue-wide-from-above.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">1.9s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">venue wide from above</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/wide-28-big-push-across-packed-venue.mp4" aria-label="Play: big push across packed venue">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/wide-28-big-push-across-packed-venue.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">5.2s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">big push across packed venue</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/stack-recap/wide-29-final-wide-packed-discoballs.mp4" aria-label="Play: final wide packed discoballs">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/wide-29-final-wide-packed-discoballs.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">4.1s</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">final wide packed discoballs</p>
+      </li>
+    </ul>
+    <p class="blk__why frames__lead">
+      <b>The Loco montage, cut up too — but be warned.</b> Every one of its 10 person
+      moments is 2 to 6 frames long, so 0.10s to 0.20s. They are
+      frames, not clips. Looped below so you can actually see them, but for studying the
+      framing the stills above are the better reference. The useful lesson is that a montage
+      like this needs almost nothing per shot, so your bank does not have to be pretty.
+      <span class="u-mono u-dim blk__path">refs / G-people / clips / loco-montage /</span>
+    </p>
+    <ul class="clips">
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/01-shot03-booth-under-neon-group.mp4" aria-label="Play: booth under neon group">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/01-shot03-booth-under-neon-group.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">3f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">booth under neon group</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/02-shot07-bartender-behind-bar-smiling.mp4" aria-label="Play: bartender behind bar smiling">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/02-shot07-bartender-behind-bar-smiling.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">3f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">bartender behind bar smiling</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/03-shot08-crowd-at-the-door.mp4" aria-label="Play: crowd at the door">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/03-shot08-crowd-at-the-door.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">4f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">crowd at the door</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/04-shot10-staff-holding-tray-of-food.mp4" aria-label="Play: staff holding tray of food">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/04-shot10-staff-holding-tray-of-food.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">4f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">staff holding tray of food</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/05-shot19-crowd-standing-inside-backs.mp4" aria-label="Play: crowd standing inside backs">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/05-shot19-crowd-standing-inside-backs.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">2f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">crowd standing inside backs</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/06-shot20-bar-interior-people-on-stools.mp4" aria-label="Play: bar interior people on stools">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/06-shot20-bar-interior-people-on-stools.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">2f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">bar interior people on stools</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/07-shot22-bar-interior-with-people.mp4" aria-label="Play: bar interior with people">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/07-shot22-bar-interior-with-people.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">3f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">bar interior with people</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/08-shot23-booth-under-neon-2.mp4" aria-label="Play: booth under neon 2">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/08-shot23-booth-under-neon-2.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">4f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">booth under neon 2</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/09-shot26-stringlit-patio-tables-full.mp4" aria-label="Play: stringlit patio tables full">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/09-shot26-stringlit-patio-tables-full.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">6f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">stringlit patio tables full</p>
+      </li>
+      <li class="clip">
+        <button class="clip__stage reel__stage" type="button" data-src="refs/G-people/clips/loco-montage/10-shot30-flashlit-night-pair.mp4" aria-label="Play: flashlit night pair">
+          <img class="reel__ratio" src="refs/G-people/clips/posters/10-shot30-flashlit-night-pair.jpg" alt="" style="aspect-ratio:9/16;object-fit:cover">
+          <span class="clip__len">5f</span>
+          <span class="reel__play">Play</span>
+        </button>
+        <p class="clip__cap">flashlit night pair</p>
+      </li>
+    </ul>
   </section>
 
   <!-- ---------- D ---------- -->
@@ -1327,7 +1711,7 @@ h1,h2,h3{ margin:0; font-weight:400 }
 
   /* a failure the viewer can read and report, instead of a dead poster */
   function fail(stage, msg){
-    var card = stage.closest('.reel, .seam__card');
+    var card = stage.closest('.reel, .seam__card, .clip');
     if(card) card.classList.remove('is-playing');
     if(current === card) current = null;
     if(stage.querySelector('.reel__failed')) return;
@@ -1346,7 +1730,7 @@ h1,h2,h3{ margin:0; font-weight:400 }
   }
 
   function start(stage){
-    var card = stage.closest('.reel, .seam__card');
+    var card = stage.closest('.reel, .seam__card, .clip');
     if(!card) return;
     var src = stage.getAttribute('data-src');
     if(!src) return;
