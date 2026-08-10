@@ -173,18 +173,19 @@ Whichever wins on watch-through, post that one properly to followers. Do not run
 
 ---
 
-## The kinda chic carousels
+## The carousels
 
-Both carousels are locked and rendered. Options for each, same voice rules.
+Two different jobs, so two different caption registers. Carousel 1 sells the place, carousel 2 sells a night out.
 
-### Carousel 1 (place, after work, drink, music, people, welcome, sun, the sign)
+### Carousel 1 · kinda chic · 8 slides
+Place, after work, the drink, the music, the people, the welcome, the sun, the sign.
 
-**A. Their bio, turned outward**
+**A. Their own bio, turned outward. My pick.**
 > Leicester's tucked-away bit. Now you know.
 >
 > Fridays 5pm til midnight. Saturdays from 2pm.
 
-**B. Short and declarative, most like them**
+**B. Most like their own captions**
 > Good people. Cold drinks. Nowhere else to be.
 >
 > Freeschool Lane, Leicester. Fridays and Saturdays.
@@ -205,34 +206,40 @@ Both carousels are locked and rendered. Options for each, same voice rules.
 >
 > Fridays and Saturdays. Leicester.
 
-### Carousel 2 (after work, the decks, the chorus, your mum, the group chat, the drink, the hug, the bartender, your ex)
+### Carousel 2 · the night-out format · 9 slides
+Straight from work, the decks, the chorus, your mum, the group chat, the drink, the hug, the bartender, your ex.
 
-**A. Playing the last slide, my pick**
-> Eight good reasons to come, and one risk you take.
+These assume the "you might" opener. If you pick a different one the captions still hold, only D leans on the count.
+
+**A. Names the format. My pick.**
+> Nine things that might happen to you on a Saturday here.
 >
 > Fridays 5pm til midnight. Saturdays from 2pm. Leicester.
 
-**B. Straight**
-> Come as you are, stay til the lights come on.
+**B. Shortest**
+> You have been warned.
 >
 > Freeschool Lane, Leicester. Fridays and Saturdays.
 
-**C. Question-led, their template**
+**C. Plays the last slide**
+> Swipe to nine at your own risk.
+>
+> Fridays 5pm. Saturdays 2pm.
+
+**D. The count, with the sting**
+> Eight good outcomes and one you did not plan for.
+>
+> Back Friday from 5pm.
+
+**E. Question-led, their own template**
 > Which one of these is you? Be honest.
 >
 > Fridays and Saturdays, and yes the last one does happen.
 
-**D. Warm**
-> Bring your mum. Bring the group chat. Bring whoever.
+**F. Warm**
+> Come as you are, see what happens.
 >
-> Everyone is welcome. Open Fridays and Saturdays.
-
-**E. Cheeky**
-> Swipe to slide eight at your own risk.
->
-> Fridays 5pm. Saturdays 2pm. Leicester.
-
----
+> Everyone welcome. Fridays and Saturdays, Leicester.
 
 ## One correction I owe you
 
