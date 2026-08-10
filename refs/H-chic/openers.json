@@ -1,0 +1,191 @@
+[
+ {
+  "variant": "might",
+  "n": 1,
+  "pid": "0724-040",
+  "line": "you might come straight from work",
+  "slide": "01-you-might-come-straight-from-work.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 2,
+  "pid": "0620-057",
+  "line": "you might fall for whoever's on the decks",
+  "slide": "02-you-might-fall-for-whoever-s-on-the-decks.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 3,
+  "pid": "0530-036",
+  "line": "you might give it the full chorus",
+  "slide": "03-you-might-give-it-the-full-chorus.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 4,
+  "pid": "0808-052",
+  "line": "you might bring your mum",
+  "slide": "04-you-might-bring-your-mum.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 5,
+  "pid": "0620-017",
+  "line": "you might bring the whole group chat",
+  "slide": "05-you-might-bring-the-whole-group-chat.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 6,
+  "pid": "0724-045",
+  "line": "you might carry your drink like an accessory",
+  "slide": "06-you-might-carry-your-drink-like-an-accessory.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 7,
+  "pid": "carousel",
+  "line": "you might hug someone you met at the bar",
+  "slide": "07-you-might-hug-someone-you-met-at-the-bar.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 8,
+  "pid": "0724-031",
+  "line": "you might fall for the bartender",
+  "slide": "08-you-might-fall-for-the-bartender.jpg"
+ },
+ {
+  "variant": "might",
+  "n": 9,
+  "pid": "0724-054",
+  "line": "you might bump into your ex",
+  "slide": "09-you-might-bump-into-your-ex.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 1,
+  "pid": "0724-040",
+  "line": "no one tells you you'll come straight from work",
+  "slide": "01-no-one-tells-you-you-ll-come-straight-from-w.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 2,
+  "pid": "0620-057",
+  "line": "no one tells you you'll fall for whoever's on the decks",
+  "slide": "02-no-one-tells-you-you-ll-fall-for-whoever-s-o.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 3,
+  "pid": "0530-036",
+  "line": "no one tells you you'll give it the full chorus",
+  "slide": "03-no-one-tells-you-you-ll-give-it-the-full-cho.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 4,
+  "pid": "0808-052",
+  "line": "no one tells you your mum will love it",
+  "slide": "04-no-one-tells-you-your-mum-will-love-it.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 5,
+  "pid": "0620-017",
+  "line": "no one tells you the group chat will move here",
+  "slide": "05-no-one-tells-you-the-group-chat-will-move-he.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 6,
+  "pid": "0724-045",
+  "line": "no one tells you the drink becomes an accessory",
+  "slide": "06-no-one-tells-you-the-drink-becomes-an-access.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 7,
+  "pid": "carousel",
+  "line": "no one tells you you'll hug someone you met at the bar",
+  "slide": "07-no-one-tells-you-you-ll-hug-someone-you-met.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 8,
+  "pid": "0724-031",
+  "line": "no one tells you you'll fall for the bartender",
+  "slide": "08-no-one-tells-you-you-ll-fall-for-the-bartend.jpg"
+ },
+ {
+  "variant": "notold",
+  "n": 9,
+  "pid": "0724-054",
+  "line": "no one tells you your ex drinks here too",
+  "slide": "09-no-one-tells-you-your-ex-drinks-here-too.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 1,
+  "pid": "0724-040",
+  "line": "a normal saturday, straight from work",
+  "slide": "01-a-normal-saturday-straight-from-work.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 2,
+  "pid": "0620-057",
+  "line": "a normal saturday, you fall for whoever's on the decks",
+  "slide": "02-a-normal-saturday-you-fall-for-whoever-s-on.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 3,
+  "pid": "0530-036",
+  "line": "a normal saturday, you give it the full chorus",
+  "slide": "03-a-normal-saturday-you-give-it-the-full-choru.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 4,
+  "pid": "0808-052",
+  "line": "a normal saturday, your mum comes too",
+  "slide": "04-a-normal-saturday-your-mum-comes-too.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 5,
+  "pid": "0620-017",
+  "line": "a normal saturday, the whole group chat turns up",
+  "slide": "05-a-normal-saturday-the-whole-group-chat-turns.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 6,
+  "pid": "0724-045",
+  "line": "a normal saturday, the drink is the accessory",
+  "slide": "06-a-normal-saturday-the-drink-is-the-accessory.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 7,
+  "pid": "carousel",
+  "line": "a normal saturday, you hug a stranger",
+  "slide": "07-a-normal-saturday-you-hug-a-stranger.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 8,
+  "pid": "0724-031",
+  "line": "a normal saturday, you fall for the bartender",
+  "slide": "08-a-normal-saturday-you-fall-for-the-bartender.jpg"
+ },
+ {
+  "variant": "normal",
+  "n": 9,
+  "pid": "0724-054",
+  "line": "a normal saturday, you bump into your ex",
+  "slide": "09-a-normal-saturday-you-bump-into-your-ex.jpg"
+ }
+]
