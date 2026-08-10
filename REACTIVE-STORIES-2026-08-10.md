@@ -136,6 +136,53 @@ WHAT TO DO WITH THE ANSWERS
     the next story too.
 
 
+
+IBIZA AND RAVE EMOJIS
+=====================
+The cherry is the one that does the heavy lifting. It is Pacha's logo, so
+to anyone who has been it reads Ibiza instantly without you writing the
+word.
+
+THE CORE SIX, most recognisable
+    🍒   cherries, Pacha
+    🪩   disco ball
+    🌴   palm
+    🌅   sunset, the Cafe del Mar hour
+    🤍   white heart, Ibiza white
+    🕶️   sunglasses
+
+RAVE ENERGY
+    🔊  🎧  ⚡  🔥  🫨  🙌  💫  ✨  😵‍💫
+
+PARTY SPECIFICS
+    🫧   bubbles, reads as foam party
+    🪭   hand fan, proper club culture
+    🍸  🍹  🥂  🍾
+
+ISLAND AND HEAT
+    🏝️  🌊  ☀️  🌙  🦩  🇪🇸  🥵
+
+SIGNATURE STRINGS, use two or three not six
+    🍒🪩        the most Ibiza pair there is
+    🌴🍒✨
+    🪩🔊🫨      when it is about the music
+    🤍🌅        the softer, sunset end
+    🍒🕶️🌴      daytime
+
+FOR THE IBIZA STORY (clip 03)
+    get that ibiza feel 🍒🪩
+    or, if the text is already on the clip, just 🍒 in the corner
+
+ONE TO LEAVE ALONE
+    Do not use 💊 or anything that reads as a pill or a tab. On a licensed
+    venue's account it invites the wrong comments and gives the council
+    something to point at. The cherry gets you the same nod safely.
+
+OPTIONAL TWEAK TO THE MUSIC POLL
+    House 🍒 instead of House 🔊 if you want the Ibiza wink. It is less
+    literal, so only do it if the story around it is already Ibiza themed.
+
+
 A NOTE ON ORDER
 ---------------
 If you post several in one day, this order builds: 01 to set it up,
