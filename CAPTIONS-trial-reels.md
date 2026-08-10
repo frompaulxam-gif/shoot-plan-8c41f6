@@ -246,3 +246,55 @@ These assume the "you might" opener. If you pick a different one the captions st
 I earlier told you the grid was getting **about 3 likes a post** and I put that in the calendar doc as the baseline. The profile shows **11,846 followers**, which makes 3 likes implausible. The number came from Instagram's API returning `like_count: 3` identically on all five carousels, which almost certainly means **like counts are hidden on that account**, not that engagement is dead.
 
 So ignore that line in the calendar doc. Pull the real numbers from the account's own insights before judging any slot, and treat saves, shares and watch-through as the measures rather than likes, which was the right advice for a different reason.
+
+---
+
+## Tuesday What's On, w/c 10 Aug
+
+Line-up from Chelsea: Friday 14th, The Friday Social with Jonna. Saturday 15th, MY Presents DJ Benzo, a journey through the decades.
+
+**A. Opens on their own tagline, my pick.** It is already in the venue's three-beat rhythm, so it stops the scroll and still carries everything.
+> Music you'll know. Music you'll sing. Music you'll dance to.
+>
+> Saturday, MY Presents: DJ Benzo. Friday, The Friday Social with Jonna.
+>
+> Fri from 5pm, Sat from 2pm.
+> Tables via merchantsyardleicester.co.uk
+
+**B. Clearest, if link taps are the only goal**
+> Two nights, two very different moods.
+>
+> Friday 14th: The Friday Social with Jonna.
+> Saturday 15th: MY Presents DJ Benzo, a journey through the decades.
+>
+> Fri 5pm til midnight. Sat 2pm til midnight.
+> Tables via merchantsyardleicester.co.uk
+
+**C. Question-led, their own template**
+> Friday wind down or Saturday sing along?
+>
+> Jonna kicks it off, then DJ Benzo takes you through the decades.
+>
+> Fri from 5pm, Sat from 2pm. Tables at merchantsyardleicester.co.uk
+
+**D. Shortest**
+> Jonna on Friday. DJ Benzo on Saturday.
+>
+> That is your weekend sorted.
+> Tables via merchantsyardleicester.co.uk
+
+**E. Warmest, most complete**
+> Your weekend, planned.
+>
+> Friday 14th, The Friday Social with Jonna.
+> Saturday 15th, MY Presents DJ Benzo, a journey through the decades.
+>
+> Doors Friday 5pm, Saturday 2pm. Bring your people.
+> Tables via merchantsyardleicester.co.uk
+
+**Emoji, if you want them:** one or two only, at line ends, matching their usual. Friday line ✨ and Saturday line 🪩, or a single 🍸 at the end. Do not put one on every line.
+
+### Before you post
+- **Tag Jonna and DJ Benzo.** Free reach, and they will very likely reshare to their own stories. This is the single highest value thing on this post.
+- Tag the Merchants Yard location.
+- The Saturday sub-line on the graphic ("A journey through the decades...") is small and sits over the busiest part of the crowd. On a phone it will be hard to read. If there is time, lift it or add a slight scrim behind it. The caption carries the same information either way, so it is not a blocker.
