@@ -189,7 +189,7 @@ Both carousels are locked and rendered. Options for each, same voice rules.
 >
 > Fridays and Saturdays. Leicester.
 
-### Carousel 2 (after work, the decks, the chorus, your mum, the group chat, the drink, the hug, your ex)
+### Carousel 2 (after work, the decks, the chorus, your mum, the group chat, the drink, the hug, the bartender, your ex)
 
 **A. Playing the last slide, my pick**
 > Eight good reasons to come, and one risk you take.
