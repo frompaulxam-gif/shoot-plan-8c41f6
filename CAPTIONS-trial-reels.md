@@ -46,100 +46,106 @@ My read: **"Life without phones" belongs on the dancing** (nobody in that shot i
 
 ---
 
-## est1.mp4 and test4.mp4
-### Opening on the food truck and the group toasting. On-screen: Life without phones.
+## The framing that matters: these are recaps
 
-**A. Straight, their voice**
-> No phones out. No one filming. Just a Saturday doing what it should.
->
-> Fridays 5pm til midnight. Saturdays from 2pm.
-> Freeschool Lane, Leicester.
+They are last weekend, not an invitation to tonight. So every caption does two jobs in that order:
 
-**B. Question-led, their own template**
-> When did you last put your phone down for a whole afternoon?
->
-> That is most Saturdays here.
-> Fridays and Saturdays, Freeschool Lane, Leicester.
+1. **Say what you are watching.** Past tense, no pretending it is live.
+2. **Then point at the next one.** One line, practical.
 
-**C. Cheeky**
-> Nobody here is checking their notifications. Terrible for screen time. Great for a Saturday.
->
-> Open Fridays and Saturdays. Leicester.
-
-**D. Minimal**
-> Phones down. Round in. See you Friday.
->
-> Freeschool Lane, Leicester.
-
-**E. Sell-led**
-> This is what a Saturday looks like when nobody is on their phone.
->
-> Cocktails, street food, live music, and the best beer garden weather Leicester gets.
-> Book a table via the link.
-
----
-
-## take2_different start.mp4
-### Opening on the LED wall and close dancing. On-screen: Life without phones.
-
-**A. Straight**
-> Not one person in this clip is looking at a screen.
->
-> Fridays 5pm til midnight. Saturdays from 2pm.
-> Freeschool Lane, Leicester.
-
-**B. Their this-or-that template**
-> Scrolling at home or dancing in a courtyard in Leicester. Which one are you tonight?
->
-> Whichever, we have got you. Doors Friday at 5pm.
-
-**C. Cheeky**
-> Your screen time report is going to be so boring this week. Sorry.
->
-> Fridays and Saturdays, Leicester.
-
-**D. Minimal**
-> Look up. This is the good bit.
->
-> Fridays and Saturdays. Freeschool Lane, Leicester.
-
-**E. Warm, the guidelines line**
-> No dress code, no phones, no reason to leave early.
->
-> Everyone is welcome, bring your people.
-> Open Fridays and Saturdays.
+That is the same move as the recap-as-invite format in the plan: a recap of last week becomes the advert for this week. Any caption that opens with "doors at 5pm tonight" over last Saturday's footage reads wrong, which is why the old option 2 on the dancing video did not work.
 
 ---
 
 ## take2 different start 2.mp4
-### Opening on the wide packed yard. On-screen: Life without trending audio.
+### Wide, the whole yard packed. On-screen: Life without trending audio.
+### This is the strongest of the three.
 
-**A. Straight, the strongest**
-> No trending audio. That is just the sound of a Saturday in Leicester.
+**A. Your line, tidied. My pick.**
+> No trending audio. Just the sound of a weekend in Leicester.
 >
-> Fridays 5pm til midnight. Saturdays from 2pm.
-> Freeschool Lane.
+> Back Friday from 5pm. Saturday from 2pm.
 
-**B. Confident**
+**B. Same idea, more confident**
 > We did not need a trending sound for this one.
 >
-> Live music, cocktails, street food, and a courtyard that fills up by four.
-> Book via the link.
+> That was last weekend. Same again this Friday and Saturday.
+> Freeschool Lane, Leicester.
 
-**C. Question-led**
-> Sounds better than whatever is on your feed, no?
+**C. Instruction**
+> Sound on. That is not an audio, that is just last Saturday.
 >
-> Real music, real crowd, every Friday and Saturday. Leicester.
+> Back Friday 5pm.
 
-**D. Cheeky**
-> Turn your sound on. It is not a trending audio, it is just us.
+**D. Recap into invite, most explicit**
+> Last weekend at the yard. No filter on the sound.
 >
-> Fridays and Saturdays, Freeschool Lane, Leicester.
+> Fridays 5pm til midnight, Saturdays from 2pm. You are invited to the next one.
 
 **E. Minimal**
-> Sound on. That is the yard, not a filter.
+> The sound of a weekend in Leicester. No audio needed.
 >
-> Fridays and Saturdays. Leicester.
+> Back Friday.
+
+---
+
+## take2_different start.mp4
+### LED wall, close dancing. On-screen: Life without phones.
+
+**A. Recap framing, my pick**
+> Last weekend, and not one phone out.
+>
+> Back Friday from 5pm. Saturday from 2pm.
+
+**B. The proof**
+> Nobody in this clip is filming it. They were just there.
+>
+> That was last Saturday. Same again this week, Leicester.
+
+**C. Cheeky**
+> Nobody checked their phone for four hours. Awful for the group chat.
+>
+> Back Friday and Saturday, Freeschool Lane.
+
+**D. Warm, the guidelines wording**
+> No dress code, no phones, no reason to leave early. That was last weekend.
+>
+> Everyone is welcome, bring your people. Fridays and Saturdays.
+
+**E. Minimal**
+> Phones down. That was the weekend.
+>
+> Back Friday 5pm.
+
+---
+
+## test4.mp4 (and est1.mp4, same hook)
+### Food truck, the group toasting. On-screen: Life without phones.
+
+**A. Straight**
+> Last weekend in the yard. Phones stayed in pockets.
+>
+> Back Friday from 5pm. Saturday from 2pm. Leicester.
+
+**B. The offer, woven in**
+> Street food, cold drinks, nobody on their phone. That was Saturday.
+>
+> Same again this weekend. Book a table via the link.
+
+**C. Question, forward looking**
+> When did you last go a whole afternoon without your phone?
+>
+> That is most Saturdays here. Back from 2pm.
+
+**D. Minimal**
+> Phones down, round in. That was last weekend.
+>
+> Back Friday.
+
+**E. Cheeky**
+> Terrible for our screen time. Great for a Saturday.
+>
+> Back Friday 5pm, Saturday 2pm. Freeschool Lane, Leicester.
 
 ---
 
