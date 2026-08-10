@@ -4,9 +4,11 @@ import os, sys, textwrap
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance, ImageFilter
 
 W, H = 1080, 1350                      # 4:5, matches the reference
-FONT = "/System/Library/Fonts/HelveticaNeue.ttc"
-FONT_IDX = 7                           # Light
-CREAM = (242, 237, 226)
+FONT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Poppins-Bold.ttf")
+FONT_IDX = 0                           # Poppins Bold. Identified off the reference by
+                                       # x-height/ascender = 0.71 and a single-storey a.
+CREAM = (255, 241, 180)                # #fff1b4, sampled off the reference slides.
+                                       # A pale butter yellow, not an off-white.
 PHOTOS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "photos")
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "slides")
 
@@ -43,20 +45,20 @@ def scrim(img, strength=0.34):
     black = Image.new("RGB", img.size, (0, 0, 0))
     return Image.composite(black, img, mask)
 
-def render(photo, line, out_path, dark=0.34):
+def render(photo, line, out_path, dark=0.34, measure=0.30):
     img = cover(Image.open(os.path.join(PHOTOS, photo)).convert("RGB"), W, H)
     img = ImageEnhance.Brightness(img).enhance(1 - dark)
     img = scrim(img)
     d = ImageDraw.Draw(img)
-    size = 78
+    size = 77                             # gives ascender 63px / x-height 45px, as measured
     font = ImageFont.truetype(FONT, size, index=FONT_IDX)
-    max_w = int(W * 0.47)   # narrow measure: the reference stacks 3-5 short lines
+    max_w = int(W * measure)               # 0.30 reproduces the reference's own wraps
     lines = wrap(d, line, font, max_w)
-    while len(lines) > 6 and size > 46:
-        size -= 6
+    while len(lines) > 6 and size > 44:
+        size -= 5
         font = ImageFont.truetype(FONT, size, index=FONT_IDX)
         lines = wrap(d, line, font, max_w)
-    lh = int(size * 1.30)
+    lh = int(size * 1.51)                  # 116px leading, as measured off the reference
     total = lh * len(lines)
     y = (H - total) // 2
     for ln in lines:
