@@ -73,6 +73,21 @@ All vertical already except 04, which is a portrait photo.
     This is the one to post when you want sends rather than views.
 
 
+08  weather-check-3day.mp4            12.7s, vertical, card burned in
+08  weather-check-fri-sat-only.mp4    same clip, two day card
+    Slow pan across the packed yard, already vertical off the phone.
+    The card is burned in and sits inside the story safe zone, so
+    nothing lands under the reply bar.
+    Add on top in the app:
+        doors Friday 5pm
+        book a table, link in bio
+    Which one to use: the three day card is the honest picture, but the
+    hottest day, Thursday at 35, is a day you are shut, and it cools to
+    24 by Saturday. The Fri and Sat card shows only the days you trade
+    and still reads warm. Use that one unless you want the heat as the
+    hook.
+
+
 A NOTE ON ORDER
 ---------------
 If you post several in one day, this order builds: 01 to set it up,
