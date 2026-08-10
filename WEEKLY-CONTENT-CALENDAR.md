@@ -126,7 +126,7 @@ Judge each slot on its own metric, not on likes:
 - Sunday recap: **watch-through and shares**
 - Tuesday announce: **DMs and table enquiries**
 
-Review after four weeks. Kill whichever slot is bottom on its own metric and give the space to whichever is top. Note: the grid currently gets about 3 likes a post, so the first month's numbers are the baseline, not the verdict.
+Review after four weeks. Kill whichever slot is bottom on its own metric and give the space to whichever is top. Note: an earlier draft of this doc said the grid gets about 3 likes a post. That was wrong. The account has 11,846 followers and its like counts are hidden, so the API figure was a placeholder. Pull the real numbers from the account's own insights.
 
 ## If capacity gets tight
 
