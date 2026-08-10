@@ -783,3 +783,36 @@ h1,h2,h3{ margin:0; font-weight:400 }
   font-family:var(--mono); font-size:9px; letter-spacing:.08em; text-transform:uppercase;
   color:var(--tape);
 }
+
+/* ---------- weekly planner ---------- */
+.wk{ border:1px solid #33302a; margin:0 0 clamp(18px,2.4vw,28px); }
+.wk__head{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px;
+  padding:12px 16px; background:rgba(216,128,42,.08);
+  border-bottom:1px solid #33302a;
+}
+.wk__title{ font-family:var(--display); font-size:clamp(19px,2.4vw,26px); text-transform:uppercase }
+.wk__note{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--tape) }
+.wk__rows{ list-style:none; margin:0; padding:0 }
+.wk__row{
+  display:grid; grid-template-columns:96px minmax(0,1fr) auto;
+  gap:12px; align-items:center;
+  padding:10px 16px; border-bottom:1px solid #26241f;
+}
+.wk__row:last-child{ border-bottom:0 }
+.wk__day{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase }
+.wk__day b{ color:var(--tape); font-weight:600 }
+.wk__what{ font-size:13.5px; line-height:1.45; min-width:0 }
+.wk__what b{ font-weight:600 }
+.wk__thumbs{ display:flex; gap:5px; align-items:center }
+.wk__thumbs img{ width:44px; height:55px; object-fit:cover; display:block; box-shadow:3px 3px 0 rgba(0,0,0,.45) }
+.wk__st{
+  font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase;
+  padding:3px 7px; white-space:nowrap;
+}
+.st-ready{ background:var(--tape); color:var(--ink); font-weight:600 }
+.st-wait{ border:1px solid #4a463d; color:#8d887a }
+@media (max-width:600px){
+  .wk__row{ grid-template-columns:72px minmax(0,1fr); }
+  .wk__thumbs{ grid-column:2; }
+}
