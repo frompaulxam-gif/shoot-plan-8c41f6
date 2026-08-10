@@ -1,5 +1,7 @@
 # Merchants Yard: weekly content calendar
 
+> **Superseded 10 Aug 2026:** the live version of the weekly structure is [MERCHANTS-YARD-WEEKLY-STRUCTURE.pdf](MERCHANTS-YARD-WEEKLY-STRUCTURE.pdf). This doc keeps the longer background thinking.
+
 Built 10 Aug 2026. Venue trades Friday 5pm-midnight and Saturday 2pm-midnight, so the week is a build: afterglow Monday and Tuesday, planning moment Wednesday, proof Thursday, live Friday and Saturday, recap-as-invite Sunday.
 
 Three pillars, per the Triple Down loop. Every slot maps to one:
