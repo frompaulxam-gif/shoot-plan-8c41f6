@@ -30,16 +30,16 @@
  {
   "set": "final",
   "n": 5,
-  "pid": "0808-012",
+  "pid": "0808-019",
   "line": "kinda chic to make friends with the table next to you",
-  "slide": "05-0808-012-to-make-friends-with-the-table-next-to-y.jpg"
+  "slide": "05-0808-019-to-make-friends-with-the-table-next-to-y.jpg"
  },
  {
   "set": "final",
   "n": 6,
-  "pid": "0808-010",
+  "pid": "0808-032",
   "line": "kinda chic that nobody asks what you do for a living",
-  "slide": "06-0808-010-that-nobody-asks-what-you-do-for-a-livin.jpg"
+  "slide": "06-0808-032-that-nobody-asks-what-you-do-for-a-livin.jpg"
  },
  {
   "set": "final",
@@ -198,5 +198,61 @@
   "pid": "0620-031",
   "line": "kinda chic to leave with more mates than you brought",
   "slide": "0620-031-to-leave-with-more-mates-than-you-brough.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 1,
+  "pid": "0724-040",
+  "line": "kinda chic to come straight from work",
+  "slide": "01-0724-040-to-come-straight-from-work.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 2,
+  "pid": "0620-057",
+  "line": "kinda chic to fall for whoever's on the decks",
+  "slide": "02-0620-057-to-fall-for-whoever-s-on-the-decks.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 3,
+  "pid": "0530-036",
+  "line": "kinda chic to give it the full chorus",
+  "slide": "03-0530-036-to-give-it-the-full-chorus.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 4,
+  "pid": "0808-052",
+  "line": "kinda chic to bring your mum",
+  "slide": "04-0808-052-to-bring-your-mum.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 5,
+  "pid": "0620-017",
+  "line": "kinda chic to bring the group chat",
+  "slide": "05-0620-017-to-bring-the-group-chat.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 6,
+  "pid": "0724-045",
+  "line": "kinda chic to carry your drink like an accessory",
+  "slide": "06-0724-045-to-carry-your-drink-like-an-accessory.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 7,
+  "pid": "carousel",
+  "line": "kinda chic to hug someone you met at the bar",
+  "slide": "07-carousel-to-hug-someone-you-met-at-the-bar.jpg"
+ },
+ {
+  "set": "final2",
+  "n": 8,
+  "pid": "0724-054",
+  "line": "kinda chic that you might see your ex",
+  "slide": "08-0724-054-that-you-might-see-your-ex.jpg"
  }
 ]
