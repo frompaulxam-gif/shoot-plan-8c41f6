@@ -93,6 +93,54 @@ All vertical already except 04, which is a portrait photo.
     say the word, it is a one line overlay.
 
 
+
+MUSIC POLL  ·  READY TO PUT ON A STORY
+======================================
+Instagram polls take up to four options, so all four genres fit in one
+sticker. Pair it with the DJ photo (04) or any dancing clip.
+
+QUESTION WORDING, pick one
+    what are we playing this weekend?          <- my pick, it implies you act on it
+    what gets you on the dancefloor?
+    pick the sound for Saturday
+    you choose Saturday's vibe
+    which one is getting played first?
+
+THE FOUR OPTIONS WITH EMOJIS
+    disco            Disco 🪩
+    r&b / hip hop    R&B / Hip Hop 🎤
+    pop              Pop ⭐
+    house            House 🔊
+
+Those four are deliberately different shapes and colours so they read at
+sticker size: a ball, a mic, a star, a speaker. Nothing gets mistaken for
+anything else at a glance.
+
+SWAPS IF YOU WANT A DIFFERENT FEEL
+    disco            🪩  ✨  🕺
+    r&b / hip hop    🎤  🎧  💿  🧢
+    pop              ⭐  💫  🎀  🍭
+    house            🔊  🎛️  🌀  🫨
+Avoid using 🎶 or 🎵 on more than one option, they blur together.
+
+THE BETTER VERSION: RUN IT AS A KNOCKOUT
+One poll gives you one story. A bracket gives you four weeks and people
+come back to see who won.
+    week 1   Disco 🪩  vs  Pop ⭐
+    week 2   R&B / Hip Hop 🎤  vs  House 🔊
+    week 3   the two winners, head to head
+    week 4   "you picked it, here it is" over footage of the night
+Two options beat four for total votes, because it is a faster decision,
+and you still end up with the same answer.
+
+WHAT TO DO WITH THE ANSWERS
+    Screenshot the result and reshare it the next day with the winner.
+    Send it to the DJ, that is the actual point.
+    The winning genre becomes a caption line: "you voted house, so."
+    Anyone who votes has told the algorithm they care, so they will see
+    the next story too.
+
+
 A NOTE ON ORDER
 ---------------
 If you post several in one day, this order builds: 01 to set it up,
