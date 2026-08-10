@@ -120,3 +120,119 @@
     }, { threshold:0.15 }).observe(hero);
   }
 })();
+
+/* ================= like picker =================
+   Tap the heart on any slide to shortlist it. Review sorts each pick
+   into "the photo" or "the text". Saved in this browser (localStorage),
+   Copy list exports plain text to send on. */
+(function(){
+  'use strict';
+  var HOLDERS = '.chic__img, .opt2__img, .pool__img';
+  if(!document.querySelector(HOLDERS)) return;
+  var KEY='myard_likes_v1', state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ state={}; }
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+
+  function lineFor(holder){
+    var card=holder.closest('li, figure');
+    var cap=card && card.querySelector('.chic__line, .opt2__cap, .pool__cap');
+    return cap ? cap.textContent.trim().replace(/\s+/g,' ').replace('\u2192',' \u2192 ') : '';
+  }
+
+  var hearts={};
+  document.querySelectorAll(HOLDERS).forEach(function(holder){
+    var img=holder.querySelector('img');
+    if(!img) return;
+    var id=img.getAttribute('src');
+    if(!id || id.indexOf('/reference/')!==-1) return;   // the @lh_social_ examples are not pickable
+    var b=document.createElement('button');
+    b.type='button'; b.className='lk'; b.textContent='♥';
+    b.setAttribute('aria-label','Add to my list');
+    if(state[id]) b.classList.add('is-on');
+    b.addEventListener('click', function(e){
+      e.preventDefault(); e.stopPropagation();
+      if(state[id]){ delete state[id]; b.classList.remove('is-on'); }
+      else{ state[id]={line:lineFor(holder), photo:false, text:false, ts:Date.now()}; b.classList.add('is-on'); }
+      save(); tray();
+    });
+    holder.appendChild(b);
+    hearts[id]=b;
+  });
+
+  /* tray */
+  var trayEl=document.createElement('div');
+  trayEl.className='lktray';
+  trayEl.innerHTML='<span class="lktray__n"></span>'+
+    '<button type="button" data-act="review">Review</button>'+
+    '<button type="button" class="ghost" data-act="copy">Copy list</button>';
+  document.body.appendChild(trayEl);
+  function tray(){
+    var n=Object.keys(state).length;
+    trayEl.querySelector('.lktray__n').textContent=n+' liked';
+    trayEl.classList.toggle('is-show', n>0);
+  }
+
+  /* review panel */
+  var panel=document.createElement('div');
+  panel.className='lkpanel';
+  panel.innerHTML='<div class="lkpanel__head"><span class="lkpanel__title">My list</span>'+
+    '<button type="button" class="tagbtn" data-act="close">Close</button></div>'+
+    '<p class="lkpanel__sub">For each one: is it the photo you like, the text, or both? '+
+    'Tap to tag, then Copy list and send it over. Saved on this device.</p><div class="lkpanel__rows"></div>';
+  document.body.appendChild(panel);
+
+  function renderPanel(){
+    var box=panel.querySelector('.lkpanel__rows'); box.innerHTML='';
+    Object.keys(state).sort(function(a,b){ return state[a].ts-state[b].ts; }).forEach(function(id){
+      var it=state[id];
+      var row=document.createElement('div'); row.className='lkrow';
+      row.innerHTML='<img src="'+id+'" alt="">'+
+        '<span class="lkrow__line">'+(it.line||'(photo only)')+'</span>'+
+        '<span class="lkrow__ctl">'+
+        '<button type="button" class="tagbtn'+(it.photo?' is-on':'')+'" data-t="photo">photo</button>'+
+        '<button type="button" class="tagbtn'+(it.text?' is-on':'')+'" data-t="text">text</button>'+
+        '<button type="button" class="lkrow__x" aria-label="Remove">×</button></span>';
+      row.querySelectorAll('.tagbtn[data-t]').forEach(function(tb){
+        tb.addEventListener('click', function(){
+          it[tb.dataset.t]=!it[tb.dataset.t];
+          tb.classList.toggle('is-on', it[tb.dataset.t]); save();
+        });
+      });
+      row.querySelector('.lkrow__x').addEventListener('click', function(){
+        delete state[id];
+        if(hearts[id]) hearts[id].classList.remove('is-on');
+        save(); tray(); renderPanel();
+      });
+      box.appendChild(row);
+    });
+  }
+
+  function exportText(){
+    var ids=Object.keys(state).sort(function(a,b){ return state[a].ts-state[b].ts; });
+    var out=['MERCHANTS YARD PICKS ('+ids.length+')',''];
+    ids.forEach(function(id,i){
+      var it=state[id];
+      var tag=it.photo&&it.text?'photo + text':it.photo?'photo':it.text?'text':'untagged';
+      out.push((i+1)+'. ['+tag+'] '+(it.line||'(photo only)'));
+      out.push('   '+id); out.push('');
+    });
+    return out.join('\n');
+  }
+  window.__likesExport=exportText;
+
+  trayEl.addEventListener('click', function(e){
+    var act=e.target.dataset&&e.target.dataset.act;
+    if(act==='review'){ renderPanel(); panel.classList.add('is-show'); }
+    if(act==='copy'){
+      var t=exportText();
+      var done=function(){ e.target.textContent='Copied'; setTimeout(function(){ e.target.textContent='Copy list'; },1600); };
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done,function(){ window.prompt('Copy this:',t); }); }
+      else window.prompt('Copy this:',t);
+    }
+  });
+  panel.addEventListener('click', function(e){
+    if(e.target.dataset&&e.target.dataset.act==='close') panel.classList.remove('is-show');
+  });
+
+  tray();
+})();
