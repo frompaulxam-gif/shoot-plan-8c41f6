@@ -1,6 +1,6 @@
 # Merchants Yard - shoot day run sheet
 
-One Saturday. 12 of 14 formats. Print this or keep it open on your phone.
+One Saturday. 17 of 19 formats. Print this or keep it open on your phone.
 
 ## Before you leave
 - [ ] Charged: camera, 2 spare batteries, phone, ND filter
@@ -89,7 +89,7 @@ Bank these five looks through the night:
 Back on the same three marks. The payoff.
 - [ ] 01 Same overhead wide, yard busy
 - [ ] 02 Same bar, three deep and working
-- [ ] 03 Same tables, **people dancing** — shoot this one last, it may not be there until closer to 23:00
+- [ ] 03 Same tables, **people dancing**. Shoot this one last, it may not be there until closer to 23:00
 
 ## 23:00 - Wrap
 - [ ] Pull the overhead rig

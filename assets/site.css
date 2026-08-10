@@ -1,5 +1,5 @@
 /* ============================================================
-   MERCHANTS YARD — SHOOT PLAN
+   MERCHANTS YARD · SHOOT PLAN
    A call sheet that plays.
    Lit like the day it describes: bleached daylight above the
    14:00 DOORS seam, ink black below it.
@@ -93,7 +93,7 @@ h1,h2,h3{ margin:0; font-weight:400 }
 .bar__nav b{ color:var(--tape); font-weight:500; margin-right:5px }
 
 /* ============================================================
-   HERO — the thesis, in daylight
+   HERO · the thesis, in daylight
    ============================================================ */
 .hero{
   display:grid;
@@ -375,7 +375,7 @@ h1,h2,h3{ margin:0; font-weight:400 }
 .clip__group{ font-size:12px }
 
 /* ============================================================
-   THE SEAM — 14:00 DOORS
+   THE SEAM · 14:00 DOORS
    the signature. daylight above, night below, and the
    empty→full reel sits on the line because that is
    literally what the format is.
@@ -626,7 +626,7 @@ h1,h2,h3{ margin:0; font-weight:400 }
 }
 
 /* ============================================================
-   PAGE LOAD — one orchestrated moment, nothing scattered
+   PAGE LOAD · one orchestrated moment, nothing scattered
    ============================================================ */
 @keyframes rise{ from{ opacity:0; transform:translateY(14px) } to{ opacity:1; transform:none } }
 @keyframes draw{ from{ transform:scaleX(0) } to{ transform:scaleX(1) } }
@@ -684,7 +684,7 @@ h1,h2,h3{ margin:0; font-weight:400 }
 }
 
 /* ============================================================
-   PRINT — degrade to a usable paper call sheet
+   PRINT · degrade to a usable paper call sheet
    ============================================================ */
 @media print{
   body{ background:#fff; color:#000; font-size:10pt }
@@ -695,3 +695,33 @@ h1,h2,h3{ margin:0; font-weight:400 }
   .blk,.sec{ break-inside:avoid }
   .reels{ grid-template-columns:1fr 1fr }
 }
+
+/* ============================================================
+   KINDA CHIC · line + photo pairings for picking
+   ============================================================ */
+.chics{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(14px,1.8vw,24px);
+  list-style:none; margin:0 0 clamp(26px,3vw,38px); padding:0;
+}
+.chic{ display:flex; flex-direction:column; min-width:0 }
+.chic__img{ position:relative; box-shadow:8px 8px 0 rgba(0,0,0,.5) }
+.chic__img img{ width:100%; aspect-ratio:4/5; object-fit:cover; display:block }
+.chic__badge{
+  position:absolute; top:0; left:0;
+  font-family:var(--mono); font-size:12px; font-weight:600;
+  background:var(--tape); color:var(--ink);
+  padding:5px 9px;
+}
+.chic__yours{
+  position:absolute; top:0; right:0;
+  font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase;
+  background:var(--paper); color:var(--ink);
+  padding:4px 7px;
+}
+.chic__line{
+  font-size:14.5px; line-height:1.45;
+  margin:11px 0 0;
+}
+.chic__src{ font-size:9.5px; margin:6px 0 0; color:#8d887a }

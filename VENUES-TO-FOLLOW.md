@@ -44,14 +44,14 @@ You have picked 19 reels from these accounts. That is a stronger signal than any
 
 Ranked. What to steal, specifically.
 
-1. **@digbethdiningclub** — Birmingham, ~109K. Your closest analogue at scale and in your region. **Steal the vendor-of-the-week format:** make the trader the character, not the venue. That gives you an endless content well without needing a new event every week.
-2. **@stjamesstack** — Newcastle. A purpose-built matchday fan zone. **Steal the three-act fixture structure:** build-up as the crowd fills, reaction on the big screen, wind-down after. That is exactly your Friday and Saturday sport nights, and it is the account four of your own references came from.
-3. **@balticmarket** — Liverpool, ~132K. Biggest short-form library in the north for this venue type. **Steal the matchday cadence** and the way they cut food macro against wide crowd shots inside the same fifteen seconds.
-4. **@peddlermkt** — Sheffield, ~42K. A monthly night market turned into a content engine. **Steal the countdown loop:** announce, line-up reveal, night-of, recap. Maps directly onto a weekly Fri/Sat cycle.
-5. **@binksyard** — Nottingham, ~27K. Nearest big-city peer at a scale you can actually resource against, unlike the 100K+ operations. **Steal the re-skin:** open-air cinema, themed nights, one physical space presented as several distinct events.
-6. **@templeof.fun** — Sheffield (Church), ~62K. Strongest visual identity on the list. **Steal the art-direction discipline:** a locked colour and lighting look so a clip is recognisably theirs before the logo appears.
-7. **@boxparkcroydon** — The reference for crowd energy. **Steal the reaction-cam framing:** point the camera at the crowd during a goal, not at the screen. Highest-shareability shot available to you and it costs nothing.
-8. **@tigeryardcardiff** — ~30K. Closest match to your actual problem: a yard that opens for summer. **Steal the season-opening hype run** and how they message covered/heated space to work around British weather without killing the outdoor promise.
+1. **@digbethdiningclub** · Birmingham, ~109K. Your closest analogue at scale and in your region. **Steal the vendor-of-the-week format:** make the trader the character, not the venue. That gives you an endless content well without needing a new event every week.
+2. **@stjamesstack** · Newcastle. A purpose-built matchday fan zone. **Steal the three-act fixture structure:** build-up as the crowd fills, reaction on the big screen, wind-down after. That is exactly your Friday and Saturday sport nights, and it is the account four of your own references came from.
+3. **@balticmarket** · Liverpool, ~132K. Biggest short-form library in the north for this venue type. **Steal the matchday cadence** and the way they cut food macro against wide crowd shots inside the same fifteen seconds.
+4. **@peddlermkt** · Sheffield, ~42K. A monthly night market turned into a content engine. **Steal the countdown loop:** announce, line-up reveal, night-of, recap. Maps directly onto a weekly Fri/Sat cycle.
+5. **@binksyard** · Nottingham, ~27K. Nearest big-city peer at a scale you can actually resource against, unlike the 100K+ operations. **Steal the re-skin:** open-air cinema, themed nights, one physical space presented as several distinct events.
+6. **@templeof.fun** · Sheffield (Church), ~62K. Strongest visual identity on the list. **Steal the art-direction discipline:** a locked colour and lighting look so a clip is recognisably theirs before the logo appears.
+7. **@boxparkcroydon** · The reference for crowd energy. **Steal the reaction-cam framing:** point the camera at the crowd during a goal, not at the screen. Highest-shareability shot available to you and it costs nothing.
+8. **@tigeryardcardiff** · ~30K. Closest match to your actual problem: a yard that opens for summer. **Steal the season-opening hype run** and how they message covered/heated space to work around British weather without killing the outdoor promise.
 
 ---
 
