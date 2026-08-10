@@ -154,7 +154,7 @@ A Friday, 19:00 to midnight. Only needed if the Saturday crowd was thin or you w
 
 Venue hours from the brand guidelines: Fridays 5pm to midnight, Saturdays and bank holidays 2pm to midnight, season May to September.
 
-Dates left: **Fridays** 7, 14, 21, 28 Aug and 4, 11, 18, 25 Sep. **Saturdays** 8, 15, 22, 29 Aug and 5, 12, 19, 26 Sep. Plus **Mon 31 Aug**, the August bank holiday, which is a 2pm open.
+Dates left: **Fridays** 7, 14, 21, 28 Aug and 4, 11, 18, 25 Sep. **Saturdays** 8, 15, 22, 29 Aug and 5, 12, 19, 26 Sep. Plus **Sun 30 Aug**, the bank holiday Sunday, which is a 2pm open. Monday 31 Aug is closed: the venue trades bank holiday Sundays, not Mondays.
 
 | When | Why it matters |
 |---|---|
@@ -162,7 +162,7 @@ Dates left: **Fridays** 7, 14, 21, 28 Aug and 4, 11, 18, 25 Sep. **Saturdays** 8
 | **Sun 16 Aug** | FA Community Shield, Man City v Arsenal at the Principality Stadium. Falls on a Sunday, which is outside normal hours, so it is a venue decision whether to open. Ask, do not assume. |
 | **Fri 21 Aug** | **Premier League opening night.** Arsenal v Coventry, and it lands inside Friday opening hours. Best big-screen sport hook of the month. Post the AI teaser earlier in the week pointing at this date. |
 | **Sat 22 Aug** | First full Premier League Saturday, 3pm and 5:30pm kick-offs, venue open from 2pm. |
-| **Sat 29 - Mon 31 Aug** | Bank holiday weekend, the biggest trading weekend left. Three days in a row. |
+| **Fri 28 to Sun 30 Aug** | Bank holiday weekend, the biggest trading weekend left. Three days in a row, Friday, Saturday and the bank holiday Sunday. |
 | **September** | Light gets unreliable, so this month runs on the August bank plus the plate bank. Angle shifts to "last of the summer" urgency, then Halloween and Winter teasers. |
 
 The season closing weekend is **Sat 26 Sep**. That deserves its own build-up, and the empty-to-full reel from 8 Aug is the perfect thing to repost as a "one more like this left" post in the final fortnight.
