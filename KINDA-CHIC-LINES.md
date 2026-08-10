@@ -23,17 +23,16 @@ Poppins Bold is now installed at `~/Library/Fonts/Poppins-Bold.ttf`, so you can 
 
 Regenerate any slide: `python3 refs/H-chic/render.py <photo> "<line>"`.
 
+
 ## Which version to use
 
-The **kinda chic** version borrows someone else's format, which is fine for one post and gets attention because the phrasing is doing the work. The **brand voice** version is what the guidelines actually ask for: like a good host, chatty, slightly cheeky, sentence case, confident not arrogant.
+Both options keep the kinda chic opener. Option a is the trend phrasing. Option b is the same format with the rest of the line in the guidelines' voice: like a good host, chatty, slightly cheeky. Nine of the option b lines carry the guidelines' own wording and are marked.
 
-My honest read: run the brand voice version. It sounds like the venue rather than like a trend, and it will still work in six months. Use the kinda chic version if you specifically want the borrowed format to do the reach.
-
-Five brand lines use the guidelines' own wording and are marked below.
+My read: option b where the two are close, option a where the trend phrasing is doing real work (the bag line, the ex line). Either way it reads as one consistent series because the opener never changes.
 
 ## The one rule, either way
 
-Every line is something **the reader** does, never something the venue is. "kinda chic to have a hidden courtyard as your local" flatters them. "our cocktails are great" would be smug, and it cuts against the unpretentious, social-not-exclusive line in the guidelines.
+Every line is something **the reader** does, never something the venue is.
 
 ## No football
 
@@ -44,97 +43,95 @@ Deliberately none of these lean on sport or the big screen.
 ## The eight I would run, in order
 
 **1.** `no.01`
-- kinda chic: kinda chic to have a hidden courtyard as your local
-- brand voice: Tucked away. Yours all summer.
+- option a: kinda chic to have a hidden courtyard as your local
+- option b: kinda chic to have a tucked-away spot that's yours
 
 **2.** `no.09`
-- kinda chic: kinda chic to come straight from work
-- brand voice: Straight from work, no changing
+- option a: kinda chic to come straight from work
+- option b: kinda chic to come as you are *(guidelines wording)*
 
 **3.** `no.20`
-- kinda chic: kinda chic to match your drink to your bag
-- brand voice: Frozen, pink and very photogenic
+- option a: kinda chic to match your drink to your bag
+- option b: kinda chic to order the photogenic one
 
 **4.** `no.13`
-- kinda chic: kinda chic to know every word when the dj plays that song
-- brand voice: That song comes on and everyone knows it
+- option a: kinda chic to know every word when the dj plays that song
+- option b: kinda chic when the whole yard sings one song
 
 **5.** `no.29`
-- kinda chic: kinda chic to make friends with the table next to you
-- brand voice: Everyone's welcome. Bring your people. *(guidelines wording)*
+- option a: kinda chic to make friends with the table next to you
+- option b: kinda chic to bring your people *(guidelines wording)*
 
 **6.** `no.32`
-- kinda chic: kinda chic that nobody asks what you do for a living
-- brand voice: No barriers, no judgement, just good energy *(guidelines wording)*
+- option a: kinda chic that nobody asks what you do for a living
+- option b: kinda chic to fit in on your first visit
 
 **7.** `no.39`
-- kinda chic: kinda chic to spend your weekends outside
-- brand voice: Sun's out. You know where to be. *(guidelines wording)*
+- option a: kinda chic to spend your weekends outside
+- option b: kinda chic to know where to be when the sun's out *(guidelines wording)*
 
 **8.** `no.02`
-- kinda chic: kinda chic to know where the yard is
-- brand voice: Now you know where we are
+- option a: kinda chic to know where the yard is
+- option b: kinda chic to know the way in
 
 ---
 
 ## All 52
 
-Lines marked **(yours)** are the ones you wrote. Brand lines marked **(guidelines)** use the guidelines' own wording.
-
-| # | Kinda chic | Brand voice |
+| # | Option a | Option b (brand voice) |
 |---|---|---|
-| 01 | kinda chic to have a hidden courtyard as your local **(yours)** | Tucked away. Yours all summer. |
-| 02 | kinda chic to know where the yard is **(yours)** | Now you know where we are |
-| 03 | kinda chic to have somewhere that's yours in town | Your spot in the middle of it all |
-| 04 | kinda chic that the roof is just the sky | No roof. No dress code. No rush. |
-| 05 | kinda chic to be the one who found it first | Found it. Now bring everyone. |
-| 06 | kinda chic to give directions nobody else can | Hard to find. Easy to stay. |
-| 07 | kinda chic to go for one after work and stay all night **(yours)** | Came for one. Stayed for six. |
-| 08 | kinda chic that one drink turned into five | One drink in and the night's gone |
-| 09 | kinda chic to come straight from work | Straight from work, no changing |
-| 10 | kinda chic to cancel the rest of your evening | Cancel the rest of your plans |
-| 11 | kinda chic that friday starts at five | Doors at five. Bring your people. |
-| 12 | kinda chic to have nowhere else to be | Nowhere to be. Nothing to prove. |
-| 13 | kinda chic to know every word when the dj plays that song **(yours)** | That song comes on and everyone knows it |
-| 14 | kinda chic to hear the sax before you see it | Live sax, right through the crowd |
-| 15 | kinda chic to have live sax with your second drink | Sax on. Second round in. |
-| 16 | kinda chic when the dj plays it anyway | Ask nicely and it might get played |
-| 17 | kinda chic to dance where there is no dancefloor | No dancefloor. Everyone's dancing. |
-| 18 | kinda chic when you can still hear each other | Music you feel, not music you shout over **(guidelines)** |
-| 19 | kinda chic to lose an hour to one song | One song and the night turns |
-| 20 | kinda chic to match your drink to your bag | Frozen, pink and very photogenic |
-| 21 | kinda chic to order the one with the orange on it | Ask for the one with the orange |
-| 22 | kinda chic to watch them build it in front of you | Made in front of you, not out the back |
-| 23 | kinda chic to know your order before you get there | You already know your order |
-| 24 | kinda chic to drink something frozen in leicester | Frozen drinks. Leicester. Yes really. |
-| 25 | kinda chic to hold a proper glass outdoors | Proper glass, proper drink, outside |
-| 26 | kinda chic when the pint catches the light | Cold pint, golden hour, sorted |
-| 27 | kinda chic to let them choose for you | Not sure? Let the bar decide. |
-| 28 | kinda chic to never look at the menu | Same order every time and no shame |
-| 29 | kinda chic to make friends with the table next to you **(yours)** | Everyone's welcome. Bring your people. **(guidelines)** |
-| 30 | kinda chic to arrive as two and leave as nine | Came as two. Leaving as nine. |
-| 31 | kinda chic to be on first name terms with the bar | We'll know your name by round two |
-| 32 | kinda chic that nobody asks what you do for a living | No barriers, no judgement, just good energy **(guidelines)** |
-| 33 | kinda chic to bring your mum and your mates | Mates, family, colleagues. All of it works. |
-| 34 | kinda chic that every table is the best table | Grab any bench. They're all good. |
-| 35 | kinda chic to laugh at nothing for a full minute | You had to be there |
-| 36 | kinda chic to share a bench with strangers | Long benches, new mates |
-| 37 | kinda chic to hug someone you met at the bar | Strangers at five, mates by nine |
-| 38 | kinda chic to be the loudest table and the nicest | Be the loud table. We don't mind. |
-| 39 | kinda chic to spend your weekends outside **(yours)** | Sun's out. You know where to be. **(guidelines)** |
-| 40 | kinda chic to get a tan line at the bar | Sunburn optional. Cold drink essential. |
-| 41 | kinda chic to move tables as the sun moves | Follow the sun round the yard |
-| 42 | kinda chic to sit outside in leicester and mean it | Outdoors in Leicester, done properly |
-| 43 | kinda chic to watch it get dark from outside | Stay out till the lights come on |
-| 44 | kinda chic when the staff are having more fun | Our lot are enjoying it as much as you |
-| 45 | kinda chic that they know your face | Regulars from your first visit **(guidelines)** |
-| 46 | kinda chic to be hotter than your ex | Hotter than your ex. Their words, not ours. |
-| 47 | kinda chic to always pose under the same neon | Everyone gets a photo here |
-| 48 | kinda chic to dress up for a picnic bench | Dress up or don't. No dress code. |
-| 49 | kinda chic to wear white and risk it | All white, all summer, all risk |
-| 50 | kinda chic to get ready for a courtyard | Get ready. It's a yard, not a club. |
-| 51 | kinda chic to be someone's favourite regular | Some faces we see every week |
-| 52 | kinda chic to still be here at closing | Still going at midnight |
+| 01 | kinda chic to have a hidden courtyard as your local **(yours)** | kinda chic to have a tucked-away spot that's yours |
+| 02 | kinda chic to know where the yard is **(yours)** | kinda chic to know the way in |
+| 03 | kinda chic to have somewhere that's yours in town | kinda chic to switch off in the middle of town **(guidelines)** |
+| 04 | kinda chic that the roof is just the sky | kinda chic to drink under the open sky |
+| 05 | kinda chic to be the one who found it first | kinda chic to be the mate who found it **(guidelines)** |
+| 06 | kinda chic to give directions nobody else can | kinda chic to bring someone for their first time |
+| 07 | kinda chic to go for one after work and stay all night **(yours)** | kinda chic when after-work drinks turn into late nights **(guidelines)** |
+| 08 | kinda chic that one drink turned into five | kinda chic to say one more and mean three |
+| 09 | kinda chic to come straight from work | kinda chic to come as you are **(guidelines)** |
+| 10 | kinda chic to cancel the rest of your evening | kinda chic to text sorry, staying out |
+| 11 | kinda chic that friday starts at five | kinda chic to start the weekend at five |
+| 12 | kinda chic to have nowhere else to be | kinda chic to lose track of the evening |
+| 13 | kinda chic to know every word when the dj plays that song **(yours)** | kinda chic when the whole yard sings one song |
+| 14 | kinda chic to hear the sax before you see it | kinda chic to follow the sax through the crowd |
+| 15 | kinda chic to have live sax with your second drink | kinda chic to get live music with your round |
+| 16 | kinda chic when the dj plays it anyway | kinda chic to ask the dj nicely |
+| 17 | kinda chic to dance where there is no dancefloor | kinda chic to dance between the benches |
+| 18 | kinda chic when you can still hear each other | kinda chic to feel the music, not shout over it **(guidelines)** |
+| 19 | kinda chic to lose an hour to one song | kinda chic to stay for one more song |
+| 20 | kinda chic to match your drink to your bag | kinda chic to order the photogenic one |
+| 21 | kinda chic to order the one with the orange on it | kinda chic to point at what she's having |
+| 22 | kinda chic to watch them build it in front of you | kinda chic to watch your drink get made properly |
+| 23 | kinda chic to know your order before you get there | kinda chic to have a usual here |
+| 24 | kinda chic to drink something frozen in leicester | kinda chic to get a frozen one in leicester |
+| 25 | kinda chic to hold a proper glass outdoors | kinda chic to get a proper drink outdoors |
+| 26 | kinda chic when the pint catches the light | kinda chic to catch golden hour with a pint |
+| 27 | kinda chic to let them choose for you | kinda chic to ask the bar to surprise you |
+| 28 | kinda chic to never look at the menu | kinda chic to skip the menu entirely |
+| 29 | kinda chic to make friends with the table next to you **(yours)** | kinda chic to bring your people **(guidelines)** |
+| 30 | kinda chic to arrive as two and leave as nine | kinda chic to leave with more mates than you brought |
+| 31 | kinda chic to be on first name terms with the bar | kinda chic to get greeted like a regular **(guidelines)** |
+| 32 | kinda chic that nobody asks what you do for a living | kinda chic to fit in on your first visit |
+| 33 | kinda chic to bring your mum and your mates | kinda chic to bring your mum and the group chat |
+| 34 | kinda chic that every table is the best table | kinda chic to grab any bench and settle in |
+| 35 | kinda chic to laugh at nothing for a full minute | kinda chic to set the whole table off |
+| 36 | kinda chic to share a bench with strangers | kinda chic to make room for one more |
+| 37 | kinda chic to hug someone you met at the bar | kinda chic to leave with new numbers saved |
+| 38 | kinda chic to be the loudest table and the nicest | kinda chic to be the table everyone wants to join |
+| 39 | kinda chic to spend your weekends outside **(yours)** | kinda chic to know where to be when the sun's out **(guidelines)** |
+| 40 | kinda chic to get a tan line at the bar | kinda chic to catch the sun with a drink in hand |
+| 41 | kinda chic to move tables as the sun moves | kinda chic to chase the sun round the yard |
+| 42 | kinda chic to sit outside in leicester and mean it | kinda chic to do summer properly in leicester |
+| 43 | kinda chic to watch it get dark from outside | kinda chic to stay out till the lights come on |
+| 44 | kinda chic when the staff are having more fun | kinda chic when the staff sing along too |
+| 45 | kinda chic that they know your face | kinda chic to get welcomed back |
+| 46 | kinda chic to be hotter than your ex | kinda chic to send this one to your ex |
+| 47 | kinda chic to always pose under the same neon | kinda chic to have a spot for the photo |
+| 48 | kinda chic to dress up for a picnic bench | kinda chic to dress up when there's no dress code **(guidelines)** |
+| 49 | kinda chic to wear white and risk it | kinda chic to risk white at a beer bench |
+| 50 | kinda chic to get ready for a courtyard | kinda chic to make an effort for the yard |
+| 51 | kinda chic to be someone's favourite regular | kinda chic to be back three fridays running |
+| 52 | kinda chic to still be here at closing | kinda chic to close the place on a saturday |
 
 ---
 
@@ -147,5 +144,3 @@ Lines marked **(yours)** are the ones you wrote. Brand lines marked **(guideline
 | [DbdbdRaCDVq](https://www.instagram.com/p/DbdbdRaCDVq/) | 31 Jul 2026 | 6 |
 | [DbVYg0TjT6a](https://www.instagram.com/p/DbVYg0TjT6a/) | 28 Jul 2026 | 5 |
 | [DbIPfH8jXp9](https://www.instagram.com/p/DbIPfH8jXp9/) | 23 Jul 2026 | 7 |
-
-Note: the "Brand Guidelines (2)" file you sent is identical to the version already in the folder, so nothing in the voice or the rules changed.
