@@ -76,11 +76,12 @@ All vertical already except 04, which is a portrait photo.
 08  weather-check.mp4                 12.7s, vertical, graphic burned in
 08  weather-check-fri-sat.mp4         same clip, Fri and Sat only
     Slow pan across the packed yard, already vertical off the phone.
-    Uses your weathercheckaa.png with Saturday's icon swapped for the
-    clear sun, copied pixel for pixel from Thursday so the two match
-    exactly. Scaled to 780 wide, sitting in the upper third at y 430,
-    clear of the Instagram header and well above the reply bar.
-    Edited graphic saved as refs/weathercheckaa-satsun.png.
+    Uses your weathercheckaa.png with two edits: Saturday's icon swapped
+    for the clear sun, copied pixel for pixel from Thursday, and the
+    coloured bars removed with the card resealed so the bottom edge stays
+    rounded. Scaled to 640 wide at y 430, upper third, clear of the
+    Instagram header and well above the reply bar.
+    Edited graphic saved as refs/weathercheckaa-final.png.
     Add on top in the app:
         doors Friday 5pm
         book a table, link in bio
