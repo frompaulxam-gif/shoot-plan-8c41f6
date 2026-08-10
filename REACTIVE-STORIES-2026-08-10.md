@@ -32,29 +32,88 @@ All vertical already except 04, which is a portrait photo.
     Whatever comes back goes to the DJ and gives you next week's captions.
 
 
-05  entry-policy-and-opening-hours.mov        8.1s
-    The walk in through the entrance, so the policy sits over the
-    thing it describes. Run it as two stories back to back.
+05  entry-policy-and-opening-hours.mov      8.1s, vertical
+    The walk in through the entrance, so the policy sits over the thing
+    it describes. Run it as TWO stories back to back. Eight seconds is
+    not long enough for all of this on one card, and a wall of text gets
+    swiped past.
 
-    STORY ONE, entry policy:
+    Lead with the yes, then the exceptions. The guidelines say no
+    barriers and no judgement, so the order matters: a door policy that
+    opens with a ban reads like a bouncer, one that opens with come as
+    you are reads like a host and still says the same thing.
 
-        No strict dress code, just keep it appropriate for the
-        time, vibe, and event.
+    ----------------------------------------------------------------
+    STORY ONE  ·  the door
+    ----------------------------------------------------------------
 
-        Casual sportswear is fine during daytime trading, but we
-        may refuse entry for sportswear during busier evenings.
+        DOOR POLICY
+
+        No strict dress code.
+        Come as you are.
+
+        Just keep it right for
+        the time and the event.
+
+        Daytime, casual
+        sportswear is fine.
+
+        Busier evenings, we may
+        turn sportswear away.
 
         No football tops.
 
-    STORY TWO, opening hours:
+    ----------------------------------------------------------------
+    STORY TWO  ·  the hours
+    ----------------------------------------------------------------
 
-        Fridays 5pm to Midnight
+        WHEN WE'RE OPEN
 
-        Saturdays and Bank Holiday Sundays 2pm to Midnight
+        Fridays
+        5pm til midnight
 
-    Keep this pair saved to a Highlight. Re-post it every few weeks
-    and before every big night, it saves the door a hundred DMs.
+        Saturdays and
+        Bank Holiday Sundays
+        2pm til midnight
 
+        Freeschool Lane, LE1 4FY
+
+    ----------------------------------------------------------------
+    IF YOU WANT IT ON ONE STORY
+    ----------------------------------------------------------------
+
+        DOOR POLICY
+
+        No strict dress code,
+        come as you are.
+
+        Sportswear fine in the day,
+        may be refused on busier
+        evenings. No football tops.
+
+        Fri 5pm til midnight
+        Sat and Bank Hol Sundays
+        2pm til midnight
+
+    Tighter, but it is a lot to read in eight seconds. Only use this
+    version if you are also saving it to a Highlight.
+
+    ----------------------------------------------------------------
+    DO THIS WITH IT
+    ----------------------------------------------------------------
+    Save both to a Highlight. The account already has What's on?, a
+    camera one and MY Moments, so add one called Info or Door. A door
+    policy has no business living for 24 hours and then vanishing, it is
+    the thing people check before they set off. Re-post to stories every
+    few weeks and before every big night.
+
+    TWO THINGS TO CONFIRM WITH THE VENUE FIRST
+    The brand guidelines say 18+ only, but you did not include it and I
+    am not going to put an age policy on a public story on a guess. Same
+    for ID. If both apply, add a line: "18+, ID may be asked for."
+    Also worth knowing: no football tops sits oddly next to screening
+    the football. If someone asks in the replies, the honest answer is
+    that it is about colours and atmosphere, not the sport.
 
 06  question-box-ask-us-anything.mov          15.6s
     Crowd at the benches at night. Trim to about six seconds.
