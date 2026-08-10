@@ -74,24 +74,19 @@ All vertical already except 04, which is a portrait photo.
 
 
 08  weather-check.mp4                 12.7s, vertical, graphic burned in
-08  weather-check-fri-sat.mp4         same clip, Fri and Sat only
-    Slow pan across the packed yard, already vertical off the phone.
+    Thursday, Friday and Saturday. Slow pan across the packed yard,
+    already vertical off the phone.
     Uses your weathercheckaa.png with two edits: Saturday's icon swapped
     for the clear sun, copied pixel for pixel from Thursday, and the
-    coloured bars removed with the card resealed so the bottom edge stays
-    rounded. Scaled to 640 wide at y 430, upper third, clear of the
-    Instagram header and well above the reply bar.
+    coloured bars removed with the card resealed so the bottom edge keeps
+    its rounded corners. Scaled to 640 wide at y 430, upper third, clear
+    of the Instagram header and well above the reply bar.
     Edited graphic saved as refs/weathercheckaa-final.png.
     Add on top in the app:
         doors Friday 5pm
         book a table, link in bio
-    Which one: the three day version is the honest picture, but the
-    hottest day, Thursday at 35, is a day you are shut, and it cools to
-    24 by Saturday. The Fri and Sat crop shows only the days you trade
-    and still reads warm.
-    To redo this next week, drop the new forecast png in Downloads and
-    say the word, it is a one line overlay.
-
+    To redo this next week: drop the new forecast png in Downloads and
+    say the word, it is a one line overlay on the same clip or a new one.
 
 
 MUSIC POLL  ·  READY TO PUT ON A STORY
