@@ -92,27 +92,37 @@ That is the same move as the recap-as-invite format in the plan: a recap of last
 ## take2_different start.mp4
 ### LED wall, close dancing. On-screen: Life without phones.
 
-**A. Recap framing, my pick**
-> Last weekend, and not one phone out.
+**The matched pair.** Your trending-audio line works because it names what the reel is missing, then reframes the absence as the real thing. Same move for phones, same shape, so the two posts read as a series:
+
+> No trending audio. Just the sound of a weekend in Leicester.
+> **No phones out. Just a weekend in Leicester.**
+
+**A. The mirror. My pick.**
+> No phones out. Just a weekend in Leicester.
 >
 > Back Friday from 5pm. Saturday from 2pm.
 
-**B. The proof**
-> Nobody in this clip is filming it. They were just there.
+**B. Same shape, on the filming**
+> Nobody filming it. Just a weekend in Leicester.
 >
-> That was last Saturday. Same again this week, Leicester.
+> Back Friday from 5pm.
 
-**C. Cheeky**
+**C. Same shape, on being there**
+> No phones out. Just everyone actually there.
+>
+> Last weekend. Back Friday and Saturday, Freeschool Lane.
+
+**D. Slightly warmer**
+> No phones, no filters, no one checking the time.
+>
+> That was last weekend. Same again Friday.
+
+**E. Cheeky**
 > Nobody checked their phone for four hours. Awful for the group chat.
 >
-> Back Friday and Saturday, Freeschool Lane.
+> Back Friday and Saturday, Leicester.
 
-**D. Warm, the guidelines wording**
-> No dress code, no phones, no reason to leave early. That was last weekend.
->
-> Everyone is welcome, bring your people. Fridays and Saturdays.
-
-**E. Minimal**
+**F. Minimal**
 > Phones down. That was the weekend.
 >
 > Back Friday 5pm.
