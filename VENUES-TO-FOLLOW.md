@@ -119,7 +119,7 @@ Ranked. What to steal, specifically.
 | Mercato Metropolitano | London | @mercatometropolitano | 114K | Large multi-site food market | Flagship closes autumn 2026 |
 | Pop Brixton | London | @popbrixton | 45K | Container village, watch parties | **Lease ends winter 2026** |
 | DEPOT | Cardiff | @depotcardiff | 60K | Warehouse, street food, big screens, strong gig recaps | Sub-brands @depotlive, @depotinthecastle |
-| Tiger Yard | Cardiff | @tigeryardcardiff | 30K | Seasonal "back for summer" hype, directly relevant to May–Sept | Independent |
+| Tiger Yard | Cardiff | @tigeryardcardiff | 30K | Seasonal "back for summer" hype, directly relevant to May-Sept | Independent |
 | Wapping Wharf | Bristol | @wappingwharf | 17K | Container village aesthetic | Independent |
 | SWG3 | Glasgow | @swg3glasgow | 84K | Yard and garden folded into the main handle | Independent |
 | Dockyard Social | Glasgow | @dockyardsocial | 51K | Warehouse street food hall | Independent |
