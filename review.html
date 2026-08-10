@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merchants Yard · Yes or no</title>
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.rv{ max-width:520px; margin:0 auto; padding:18px var(--gut) 40px }
+.rv__top{ display:flex; align-items:center; gap:10px; margin-bottom:12px }
+.rv__prog{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:#8d887a }
+.rv__mode{ margin-left:auto; font-family:var(--mono); font-size:11px; background:#12110e; color:var(--paper); border:1px solid #4a463d; padding:6px }
+.rv__img{ box-shadow:10px 10px 0 rgba(0,0,0,.5); margin-bottom:14px }
+.rv__img img{ width:100%; display:block; aspect-ratio:4/5; object-fit:cover }
+.rv__line{ font-size:15px; line-height:1.5; color:var(--paper); margin-bottom:3px }
+.rv__meta{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#8d887a; margin-bottom:14px }
+.rv__note{ width:100%; min-height:64px; background:#1c1a16; color:var(--paper); border:1px solid #4a463d; padding:10px; font:14px/1.5 inherit; margin-bottom:12px }
+.rv__note:focus{ outline:2px solid var(--tape) }
+.rv__btns{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px }
+.rv__yes,.rv__no{ font-family:var(--mono); font-size:14px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; padding:16px; border:0; cursor:pointer }
+.rv__yes{ background:#3f7d3a; color:#fff }
+.rv__no{ background:var(--alert); color:#fff }
+.rv__yes[disabled]{ background:#2a2823; color:#6b675e; cursor:not-allowed }
+.rv__yes.picked{ outline:3px solid #fff }
+.rv__no.picked{ outline:3px solid #fff }
+.rv__hint{ font-family:var(--mono); font-size:10px; color:var(--tape); min-height:14px; margin-bottom:8px }
+.rv__nav{ display:flex; gap:8px }
+.rv__nav button,.rv__nav a{ flex:1; text-align:center; font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; background:transparent; color:#8d887a; border:1px solid #4a463d; padding:9px; cursor:pointer; text-decoration:none }
+.rv__done{ text-align:center; padding:40px 0 }
+.rv__done h2{ font-family:var(--display); font-size:34px; color:var(--paper); text-transform:uppercase; border:0 }
+.rv__done p{ color:#8d887a; margin:10px 0 18px }
+.rv__done button{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; background:var(--tape); color:#12110e; border:0; padding:12px 18px; cursor:pointer }
+</style>
+</head>
+<body class="band--night" style="background:#12110e;min-height:100vh">
+
+<header class="bar">
+  <span class="bar__mark">Merchants Yard</span>
+  <nav class="bar__nav">
+    <a href="chic.html">← Back to the slides</a>
+  </nav>
+</header>
+
+<div class="rv">
+  <div class="rv__top">
+    <span class="rv__prog" id="prog"></span>
+    <select class="rv__mode" id="mode"></select>
+  </div>
+  <div id="card">
+    <div class="rv__img"><img id="img" src="" alt=""></div>
+    <p class="rv__line" id="line"></p>
+    <p class="rv__meta" id="meta"></p>
+    <textarea class="rv__note" id="note" placeholder="What needs changing? Writing anything here makes it a no."></textarea>
+    <p class="rv__hint" id="hint"></p>
+    <div class="rv__btns">
+      <button type="button" class="rv__yes" id="yes">Yes</button>
+      <button type="button" class="rv__no" id="no">No</button>
+    </div>
+    <div class="rv__nav">
+      <button type="button" id="prev">← Prev</button>
+      <button type="button" id="skip">Skip →</button>
+      <button type="button" id="copy">Copy results</button>
+    </div>
+  </div>
+  <div class="rv__done" id="done" style="display:none">
+    <h2>All done</h2>
+    <p id="doneSum"></p>
+    <button type="button" id="copy2">Copy results</button>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+var LKEY='myard_likes_v1', RKEY='myard_review_v1';
+var likes={}, review={};
+try{ likes=JSON.parse(localStorage.getItem(LKEY)||'{}'); }catch(e){}
+try{ review=JSON.parse(localStorage.getItem(RKEY)||'{}'); }catch(e){}
+function save(){ try{ localStorage.setItem(RKEY,JSON.stringify(review)); }catch(e){} }
+
+fetch('refs/H-chic/review-manifest.json').then(function(r){ return r.json(); }).then(function(man){
+  var byId={}; man.forEach(function(m){ byId[m.id]=m; });
+
+  var modeSel=document.getElementById('mode');
+  var likedIds=Object.keys(likes).sort(function(a,b){ return likes[a].ts-likes[b].ts; })
+                .filter(function(id){ return byId[id]; });
+  var modes=[];
+  if(likedIds.length) modes.push({k:'liked',label:'My liked ('+likedIds.length+')',ids:likedIds});
+  ['final 8','new picks','alternates','upgraded','pair a','pair b','photo pool'].forEach(function(st){
+    var ids=man.filter(function(m){ return m.set===st; }).map(function(m){ return m.id; });
+    if(ids.length) modes.push({k:st,label:st+' ('+ids.length+')',ids:ids});
+  });
+  modes.forEach(function(m,i){
+    var o=document.createElement('option'); o.value=String(i); o.textContent='Reviewing: '+m.label;
+    modeSel.appendChild(o);
+  });
+
+  var queue=[], pos=0;
+  var el={img:document.getElementById('img'),line:document.getElementById('line'),
+    meta:document.getElementById('meta'),note:document.getElementById('note'),
+    yes:document.getElementById('yes'),no:document.getElementById('no'),
+    prog:document.getElementById('prog'),hint:document.getElementById('hint'),
+    card:document.getElementById('card'),done:document.getElementById('done'),
+    doneSum:document.getElementById('doneSum')};
+
+  function setMode(i){
+    queue=modes[i].ids.slice(); pos=0;
+    var firstOpen=queue.findIndex(function(id){ return !review[id]; });
+    if(firstOpen>0) pos=firstOpen;
+    show();
+  }
+  function counts(){
+    var y=0,n=0;
+    queue.forEach(function(id){ var r=review[id]; if(r&&r.d==='yes')y++; if(r&&r.d==='no')n++; });
+    return {y:y,n:n,open:queue.length-y-n};
+  }
+  function show(){
+    if(!queue.length) return;
+    var c=counts();
+    if(c.open===0){ el.card.style.display='none'; el.done.style.display='block';
+      el.doneSum.textContent=c.y+' yes · '+c.n+' no. Copy the results and send them over.'; el.prog.textContent=queue.length+' reviewed'; return; }
+    el.card.style.display='block'; el.done.style.display='none';
+    var id=queue[pos], m=byId[id], r=review[id]||{};
+    el.img.src=id; el.line.textContent=m.line;
+    el.meta.textContent=m.set+' · '+(pos+1)+' of '+queue.length+(r.d?' · saved: '+r.d:'');
+    el.note.value=r.c||'';
+    el.prog.textContent=c.y+' yes · '+c.n+' no · '+c.open+' to go';
+    el.yes.classList.toggle('picked', r.d==='yes');
+    el.no.classList.toggle('picked', r.d==='no');
+    noteRule();
+  }
+  function noteRule(){
+    var has=el.note.value.trim().length>0;
+    el.yes.disabled=has;
+    el.hint.textContent=has?'There is a note, so this one is a no. Clear it to say yes.':'';
+  }
+  function advance(){
+    var next=-1;
+    for(var i=1;i<=queue.length;i++){
+      var j=(pos+i)%queue.length;
+      if(!review[queue[j]]){ next=j; break; }
+    }
+    if(next===-1){ show(); } else { pos=next; show(); }
+  }
+  function decide(d){
+    var id=queue[pos];
+    var c=el.note.value.trim();
+    if(c) d='no';
+    review[id]={d:d,c:c,ts:Date.now()}; save();
+    setTimeout(advance,180);
+  }
+  function exportText(){
+    var out=['MERCHANTS YARD REVIEW',''];
+    var y=[],n=[];
+    queue.forEach(function(id){
+      var r=review[id]; if(!r) return;
+      var m=byId[id];
+      (r.d==='yes'?y:n).push({m:m,r:r});
+    });
+    out.push('YES ('+y.length+')');
+    y.forEach(function(x,i){ out.push((i+1)+'. '+x.m.line); out.push('   '+x.m.id); });
+    out.push(''); out.push('NO ('+n.length+')');
+    n.forEach(function(x,i){
+      out.push((i+1)+'. '+x.m.line);
+      if(x.r.c) out.push('   change: '+x.r.c);
+      out.push('   '+x.m.id);
+    });
+    return out.join('\n');
+  }
+  function copy(btn){
+    var t=exportText();
+    var ok=function(){ btn.textContent='Copied'; setTimeout(function(){ btn.textContent='Copy results'; },1600); };
+    if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok,function(){ window.prompt('Copy this:',t); });
+    else window.prompt('Copy this:',t);
+  }
+
+  el.note.addEventListener('input',noteRule);
+  el.yes.addEventListener('click',function(){ decide('yes'); });
+  el.no.addEventListener('click',function(){ decide('no'); });
+  document.getElementById('prev').addEventListener('click',function(){ pos=(pos-1+queue.length)%queue.length; show(); });
+  document.getElementById('skip').addEventListener('click',function(){ pos=(pos+1)%queue.length; show(); });
+  document.getElementById('copy').addEventListener('click',function(){ copy(this); });
+  document.getElementById('copy2').addEventListener('click',function(){ copy(this); });
+  modeSel.addEventListener('change',function(){ setMode(+this.value); });
+  window.__reviewExport=exportText;
+  setMode(0);
+});
+})();
+</script>
+</body>
+</html>

@@ -164,7 +164,8 @@
   trayEl.className='lktray';
   trayEl.innerHTML='<span class="lktray__n"></span>'+
     '<button type="button" data-act="review">Review</button>'+
-    '<button type="button" class="ghost" data-act="copy">Copy list</button>';
+    '<button type="button" class="ghost" data-act="copy">Copy list</button>'+
+    '<a class="ghost" href="review.html" style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8d887a;border:1px solid #4a463d;padding:7px 10px;text-decoration:none">Yes / no →</a>';
   document.body.appendChild(trayEl);
   function tray(){
     var n=Object.keys(state).length;
