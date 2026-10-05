@@ -1,6 +1,6 @@
 # Merchants Yard - shoot day run sheet
 
-One Saturday. 19 of 21 reels, plus the stills reference. Updated 5 Oct 2026. Print this or keep it open on your phone.
+One Saturday. 20 of 22 reels, plus the stills reference. Updated 5 Oct 2026. Print this or keep it open on your phone.
 
 ## Before you leave
 - [ ] Charged: camera, 2 spare batteries, phone, ND filter
@@ -43,6 +43,7 @@ Shoot 60fps.
 - [ ] Glasses wipe: blurred POV, glasses off and cleaned, frame snaps sharp on the drink
 - [ ] Four-cocktail line-up: hold each drink for its flavour label, then hands lift them away together
 - [ ] Empty final frame for venue name or confirmed offer
+- [ ] One-to-three reveal: lock a low table angle, hide three glasses in depth, slide the outer two apart together
 
 ## 13:00 - Block F, staff
 - [ ] Blind Pour Challenge, 4-5 staff, let them fail

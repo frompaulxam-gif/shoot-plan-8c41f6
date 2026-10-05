@@ -1,12 +1,12 @@
 # Merchants Yard - Shoot Plan (rest of season 2026)
 
-Built 4 Aug 2026. Three references added 5 Oct 2026. Every reference below was downloaded and watched frame by frame, not guessed from the caption. Contact sheets are in `refs/sheets/`, videos are filed by shoot-day category in `refs/`.
+Built 4 Aug 2026. Four references added 5 Oct 2026. Every reference below was downloaded and watched frame by frame, not guessed from the caption. Contact sheets are in `refs/sheets/`, videos are filed by shoot-day category in `refs/`.
 
 ---
 
 ## 1. The headline
 
-The plan now contains **21 reels and one stills reference, grouped into 17 formats**. The three additions are an overhead table-fill, a labelled cocktail line-up, and a behind-the-scenes spill-to-finished-cocktail reveal. They fit the existing drinks and staff blocks; the two long people reels still need a busy event night.
+The plan now contains **22 reels and one stills reference, grouped into 18 formats**. The four additions are an overhead table-fill, a labelled cocktail line-up, a one-to-three drink reveal, and a behind-the-scenes spill-to-finished-cocktail reveal. They fit the existing drinks and staff blocks; the two long people reels still need a busy event night.
 
 The one thing that cannot wait: **six of the formats need direct sun.** It is 4 Aug. The season runs to end of September and UK light in September is a coin toss. First available date is **Sat 8 Aug**. If the sunlit block slips past mid-August you lose it for the year.
 
@@ -38,6 +38,9 @@ Note on your pairing: you wrote "scrolling on the screen and choosing a drink an
   **Our version:** Use a Merchants Yard bench table: start with two place settings, then bring in cocktails and food from the traders. Hold the full spread before hands lift the drinks. Shoot this alongside the top-down beauty shots.
 - **[Labelled cocktail line-up](https://www.instagram.com/reels/Ddz6WRDNgYB/) · An Indian Affair · 7.8s.** Four margaritas sit around a table lamp. Hands reach in as small labels name Watermelon, Mango Chilli, Pineapple and Strawberry. The drinks are taken away together, leaving the lamp for the Margarita Mondays offer text.
   **Our version:** Line up four Yard cocktails, name each one on screen, then have friends lift them out together. Finish on the venue name or a confirmed offer. The same fixed table setup works; direct sun is optional.
+
+- **[One drink becomes three](https://www.instagram.com/reels/DcXCJbesC9N/) · Booster Burger · 7.8s.** Three colourful cocktails start lined up behind one another, so the front yellow glass hides the green and red drinks. Hands slide the outer glasses apart to reveal all three. A low, fixed table-level camera makes the alignment work; there is no on-screen text.
+  **Our version:** Use three Yard cocktails in contrasting colours. Line the glasses up in depth until only the front one is visible, then slide the outer two left and right together. Lock a separate low camera position for this take and hold the full line-up at the end.
 
 ### B. Empty to full (`refs/B-empty-to-full/`)
 
@@ -138,13 +141,13 @@ Read down the "needs" column and the day builds itself. A, E and F all want an e
 
 ## 4. The one big shoot day
 
-One Saturday, 11:00 to 23:00. This covers **19 of the 21 reels**, plus the stills reference, across the existing blocks.
+One Saturday, 11:00 to 23:00. This covers **20 of the 22 reels**, plus the stills reference, across the existing blocks.
 
 | Time | Block | What you are shooting |
 |---|---|---|
 | 10:45 | Load in | Walk the yard and find where the sun actually lands at midday. Pick the hero table. **Tape three tripod marks** for the before/after pairs: overhead yard wide, the bar, the bench tables. **Solve the overhead height now** (upstairs window, balcony, ladder). Photograph each tape position with the focal length noted. |
 | 11:00 - 12:15 | **A, clean passes** | Best light goes on the beauty shots. Frozen or spritz drinks on the hero table. POV seated with hands in, straw stir, clink, condensation, top-down with the logo in frame. Shoot 60fps for the slow-mo. Also grab the stills for the grid carousel and the overhead table-fill: hands bring in cocktails and trader food. |
-| 12:15 - 13:00 | **A, gimmick passes** | Camera does not move for any of these. Empty table pass, then the same frame with the drink already there, for the phone-tap and the menu-turn appear-cuts. Then the dark-and-flat pass followed by the bright pass for the brightness-slider one. Then the glasses wipe: blurred point of view, glasses come off and get cleaned, frame snaps sharp. Add four labelled cocktails, with hands lifting them out together. |
+| 12:15 - 13:00 | **A, gimmick passes** | Camera does not move for any of these. Empty table pass, then the same frame with the drink already there, for the phone-tap and the menu-turn appear-cuts. Then the dark-and-flat pass followed by the bright pass for the brightness-slider one. Then the glasses wipe: blurred point of view, glasses come off and get cleaned, frame snaps sharp. Add four labelled cocktails, with hands lifting them out together. At a separate low angle, line three glasses up in depth and slide the outer two apart. |
 | 13:00 - 13:40 | **F, staff** | Blind Pour Challenge behind the bar. One camera on sticks, four or five staff, let them fail. Get the reactions, not just the pour. Add the spill-to-finished-cocktail reveal: a behind-the-scenes wide, close splash at 60fps, then the clean garnished drink. |
 | 13:40 - 13:55 | **E, plate bank** | Locked-off empty wides, 15 seconds each, no camera movement, no people: entrance from as high as you can get, bar, big screen, stage, full yard wide, seating from the corner. This is the raw material for every AI post for the rest of the season. If the venue will give you the real CCTV angle or a still from it, get that too. |
 | 13:55 | **B, three empty passes** | On the taped marks: overhead yard, bar, bench tables. Same lens, same height, same exposure notes on each. |
