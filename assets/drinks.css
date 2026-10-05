@@ -1,0 +1,8 @@
+.drinks{padding:32px var(--gut) 56px;scroll-margin-top:64px}
+.drinks h1{font-family:var(--display);font-size:clamp(32px,5vw,52px);line-height:1;margin-bottom:28px}
+.drink-title{font-family:var(--body);font-size:15px;font-weight:600;line-height:1.4;margin:0 0 12px}
+.drink-title a{color:inherit;text-decoration:none}
+.drink-title a:hover{text-decoration:underline}
+.drink-title a:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.drinks .reels{row-gap:32px}
+.drinks .reel{scroll-margin-top:64px}
