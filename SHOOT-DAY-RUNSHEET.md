@@ -1,6 +1,6 @@
 # Merchants Yard - shoot day run sheet
 
-One Saturday. 17 of 19 formats. Print this or keep it open on your phone.
+One Saturday. 19 of 21 reels, plus the stills reference. Updated 5 Oct 2026. Print this or keep it open on your phone.
 
 ## Before you leave
 - [ ] Charged: camera, 2 spare batteries, phone, ND filter
@@ -32,6 +32,7 @@ Shoot 60fps.
 - [ ] Condensation macro
 - [ ] Wide of the table with the yard behind
 - [ ] Stills for the grid carousel, same setup
+- [ ] Overhead table-fill: start empty, hands bring in food and cocktails, hold the full spread
 
 ## 12:15 - Block A, gimmicks (CAMERA DOES NOT MOVE)
 - [ ] Empty table pass, hold 5s
@@ -40,11 +41,14 @@ Shoot 60fps.
 - [ ] Hand turning menu pages, one pass per item
 - [ ] Flat/dark pass then bright pass, identical frame  *(brightness slider)*
 - [ ] Glasses wipe: blurred POV, glasses off and cleaned, frame snaps sharp on the drink
+- [ ] Four-cocktail line-up: hold each drink for its flavour label, then hands lift them away together
+- [ ] Empty final frame for venue name or confirmed offer
 
 ## 13:00 - Block F, staff
 - [ ] Blind Pour Challenge, 4-5 staff, let them fail
 - [ ] Reactions, not just the pour
-- [ ] 2-3 extra challenge ideas while everyone is there
+- [ ] Spill-to-finished-cocktail: behind-the-scenes wide, close splash at 60fps, clean garnished-drink finish
+- [ ] Spare drink and towels for the splash pass; film before service
 
 ## 13:40 - Block E, plate bank (15 min, no people, no movement)
 15 seconds each, locked off:
