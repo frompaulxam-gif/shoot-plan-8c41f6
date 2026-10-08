@@ -65,18 +65,7 @@ document.querySelectorAll('.shot').forEach(shot=>{
   link.href=ref.src;
   link.setAttribute('aria-haspopup','dialog');
   link.addEventListener('click',event=>{event.preventDefault();open(ref);});
-  shot.querySelectorAll('.examples figure').forEach(figure=>{
-    const clip=figure.querySelector('video');
-    const frame=document.createElement('div');frame.className='clip-frame';
-    clip.before(frame);frame.appendChild(clip);
-    const button=document.createElement('button');
-    button.type='button';button.className='open-full-video';
-    button.setAttribute('aria-label','Watch full video: '+ref.title+' ('+figure.querySelector('figcaption').textContent+')');
-    button.setAttribute('aria-haspopup','dialog');
-    const badge=document.createElement('span');badge.textContent='Full video ↗';button.appendChild(badge);
-    frame.appendChild(button);
-    button.addEventListener('click',()=>open(ref));
-  });
+
 });
 // The full-reference gallery opens the same viewer, including keyboard activation.
 document.addEventListener('click',event=>{
