@@ -16,7 +16,7 @@ window.addEventListener('hashchange',revealAnchor);revealAnchor();
 (function(){
 'use strict';
 const references=new Map();
-document.querySelectorAll('.full-refs .reel').forEach(card=>{
+document.querySelectorAll('.full-refs .reel, .extra-refs .reel').forEach(card=>{
   const link=card.querySelector('.drink-title a');
   const stage=card.querySelector('[data-src]');
   if(link&&stage) references.set(link.href,{title:link.textContent.trim(),src:stage.dataset.src,poster:stage.querySelector('img')?.getAttribute('src')||'',url:link.href});
@@ -80,7 +80,7 @@ document.querySelectorAll('.shot').forEach(shot=>{
 });
 // The full-reference gallery opens the same viewer, including keyboard activation.
 document.addEventListener('click',event=>{
-  const stage=event.target.closest('.full-refs .reel__stage');
+  const stage=event.target.closest('.full-refs .reel__stage, .extra-refs .reel__stage');
   if(!stage)return;
   const link=stage.closest('.reel').querySelector('.drink-title a');
   const ref=link&&references.get(link.href);
